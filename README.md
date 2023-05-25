@@ -2,5 +2,5 @@
 
 ## Directory
 
-- [LangChain - Resources](./Python%20-%20AI%20-%20LangChain.md)
-- [AI - LLM - Prompt Engineering](./AI%20-%20LLM%20-%20Prompt%20Engineering.md)
+- [LangChain - Resources](./Python%20-%20AI%20-%20LangChain.html)
+- [AI - LLM - Prompt Engineering](./AI%20-%20LLM%20-%20Prompt%20Engineering.html)
