@@ -1,0 +1,27 @@
+---
+title: Resources
+layout: page
+---
+
+{% if site.data.resources %}
+{% assign resources = site.data.resources %}
+<div id="linksBox">
+  <ul class="linkStyle">
+  {% for link in resources.link_list %}
+  <li>
+    <div class="linkItem">
+        <h3>{{ link.name }}</h3>
+      <div class="linkItemUrl url">
+        <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+      </div>
+      <div class="linkItemDescriptionBox">
+        <p class="linkItemDescription">{{ link.description }}</p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+  </ul>
+</div>
+{% else %}
+There are no links.
+{% endif %}
