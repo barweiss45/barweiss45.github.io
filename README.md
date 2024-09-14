@@ -1,6 +1,3 @@
-# barweiss45.github.io
+# barweiss45.github.io - Syntax and Scribbles
 
-## Directory
-
-- [LangChain - Resources](./Python%20-%20AI%20-%20LangChain.html)
-- [AI - LLM - Prompt Engineering](./AI%20-%20LLM%20-%20Prompt%20Engineering.html)
+A quirky mashup of tech notes, random thoughts, and whatever else spills out of my brain.
