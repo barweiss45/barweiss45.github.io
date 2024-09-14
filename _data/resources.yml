@@ -1,0 +1,68 @@
+link_list:
+  - name: "Prompt Engineering Overview"
+    url: "https://www.youtube.com/watch?v=dOxUroR57xs"
+    description: |
+      A lecture covering the basics of prompt engineering and all the latest 
+      prompt engineering techniques. I also cover tools and applications, 
+      followed by a conclusion and future directions.
+  - name: "Brex's Prompt Engineering Guide"
+    url: "https://github.com/brexhq/prompt-engineering"
+    description: "A comprehensive guide to prompt engineering. However may be outdated."
+  - name: "DeepLearning.AI Course: ChatGPT Prompt Engineering for Developers"
+    url: "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers"
+    description: "DeepLearning.AI Course: ChatGPT Prompt Engineering for Developers"
+  - name: "LMQL"
+    url: "https://lmql.ai/"
+    description: "LMQL is a tool for prompt engineering and fine-tuning language models."
+  - name: "LangChain Official Documentation"
+    url: "https://python.langchain.com/en/latest/index.html"
+    description: |
+      ⚡ Building applications with LLMs through composability ⚡
+  - name: "VIDEO: LangChain CookBook Part 1: 7 Core Concepts"
+    url: "https://youtu.be/2xxziIWmaSA"
+    description: none
+  - name: "Accompanying Code - LangChain CookBook Part 1"
+    url: "https://github.com/gkamradt/langchain-tutorials/blob/main/LangChain%20Cookbook%20Part%201%20-%20Fundamentals.ipynb"
+    description: none
+  - name: "VIDEO: LangChain CookBook Part 2: 9 Use Cases"
+    url: "https://youtu.be/vGP4pQdCocw"
+    description: none
+  - name: "Accompanying Code - LangChain CookBook Part 2"
+    url: "https://github.com/gkamradt/langchain-tutorials/blob/main/LangChain%20Cookbook%20Part%202%20-%20Use%20Cases.ipynb"
+    description: none
+  - name: "VIDEO PLAYLIST: LangChain"
+    url: "https://www.youtube.com/playlist?list=PLqZXAkvF1bPNQER9mLmDbntNfSpzdDIU5"
+    description: "by Data Independent"
+  - name: "VIDEO PLAYLIST: Learn LangChain for building apps powered by GPT-4, 3.5 and GPT-3"
+    url: "https://www.youtube.com/playlist?list=PL611FKPtL866MnlDPHvI3KwVGqCB-QJAx"
+    description: "by echohive"
+  - name: "VIDEO: LangChain Basics Tutorial"
+    url: "https://www.youtube.com/watch?v=J_0qvRt4LNk&list=PL8motc6AQftk1Bs42EW45kwYbyJ4jOdiZ"
+    description: "Deep Dive"
+  - name: "Querying Tabular Data"
+    url: "https://python.langchain.com/en/latest/use_cases/tabular.html"
+    description: none
+  - name: "Agents"
+    url: "https://python.langchain.com/en/latest/use_cases/personal_assistants.html"
+    description: none
+  - name: "Extraction"
+    url: "https://python.langchain.com/en/latest/use_cases/extraction.html"
+    description: none
+  - name: "Question Answering over Docs"
+    url: "https://python.langchain.com/en/latest/use_cases/question_answering.html"
+    description: none
+  - name: "Code Understanding"
+    url: "https://python.langchain.com/en/latest/use_cases/code.html"
+    description: none
+  - name: "Interacting with API"
+    url: "https://python.langchain.com/en/latest/use_cases/apis.html"
+    description: none
+  - name: "awesome-langchain"
+    url: "https://github.com/kyrolabs/awesome-langchain"
+    description: "Awesome List for LangChain Resources"
+  - name: "GPT-4 & LangChain - Create a ChatGPT Chatbot for Your PDF Files"
+    url: "https://github.com/mayooear/gpt4-pdf-chatbot-langchain"
+    description: none
+  - name: "DocsGPT"
+    url: "https://github.com/arc53/docsgpt"
+    description: none

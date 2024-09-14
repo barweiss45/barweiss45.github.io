@@ -4,9 +4,11 @@ description: A quirky mashup of tech notes, random thoughts, and whatever else s
 
 theme: minima
 
-header_pages:
-  - about.md
-  - contact.md
+# Only pages listed here will be shown in the header
+# header_pages:
+#   - about.md
+#   - contact.md
+#   - resources.md
 
 linkedin_username: bweiss
 github_username: barweiss45
@@ -15,10 +17,6 @@ author: Barry Weiss
 
 show_excerpts: true
 page_excerpts: true
-
-minima:
-  social_links:
-    - { platform: github,  user_url: "https://github.com/jekyll/jekyll" }
 
 plugins:
   - jekyll-feed

@@ -1,0 +1,50 @@
+#linksBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#linksBox ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+.linkItem {
+    padding: 10px;
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+div.linkItem:hover {
+    background-color: #f9f9f9;
+}
+
+.linkItem h3 {
+    margin-bottom: 10px;
+    border-bottom: #f0f0f0 1px solid;
+}
+
+.linkItemUrl {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.linkItemDescriptionBox {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #f0f0f0;
+}
+
+p.linkItemDescription {
+    margin: 0;
+}
+
+.url {
+    font-size: 1.1em;
+    color: #666;
+}
