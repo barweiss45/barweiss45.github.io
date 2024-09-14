@@ -1,6 +1,6 @@
 ---
 title: About
-layout: default
+layout: page
 ---
 
 ![network-icon](assets/images/noun-networking-5024052.png)
