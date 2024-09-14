@@ -8,6 +8,11 @@ header_pages:
   - about.md
   - contact.md
 
+linkedin_username: bweiss
+github_username: barweiss45
+email: my_email@email.com
+author: Barry Weiss
+
 show_excerpts: true
 page_excerpts: true
 
