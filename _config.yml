@@ -1,24 +1,19 @@
-title: "My Blog"
+title: Syntax & Scribbles
 
-collections:
-  authors:
-    output: true
+description: A quirky mashup of tech notes, random thoughts, and whatever else spills out of my brain.
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+theme: minima
+
+header_pages:
+  - about.md
+  - contact.md
+
+show_excerpts: true
+page_excerpts: true
+
+minima:
+  social_links:
+    - { platform: github,  user_url: "https://github.com/jekyll/jekyll" }
 
 plugins:
   - jekyll-feed

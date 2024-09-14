@@ -1,0 +1,28 @@
+# Ignore other files
+.env
+README.md
+
+# Ignore Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ignore development files
+Gemfile.lock
+vendor/
+node_modules/
+package-lock.json
+yarn.lock
+
+# Ignore editor and IDE files
+.vscode/
+
+# Ignore version control files
+.git/
+.gitignore
+.github/
+
+# Ignore miscellaneous files
+.DS_Store
+Thumbs.db
