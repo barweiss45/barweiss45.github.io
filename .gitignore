@@ -1,4 +1,5 @@
 .vscode/
+.DS_Store
 
 # Ignore .env, .log, .tmp, and .bak files
 .env

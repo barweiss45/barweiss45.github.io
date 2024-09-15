@@ -1,5 +1,6 @@
 # Ignore other files
 .env
+.DS_Store
 README.md
 
 # Ignore Jekyll build artifacts
