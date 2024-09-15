@@ -1,8 +1,14 @@
-title: Syntax & Scribbles
+# Site settings
+title: "Syntax & Scribbles"
 
-description: A quirky mashup of tech notes, random thoughts, and whatever else spills out of my brain.
+description: "A quirky mashup of tech notes, random thoughts, and whatever else spills out of my brain."
 
-theme: minima
+theme: "minima"
+
+# Site settings
+email: "my_email@email.com"
+author: "Barry Weiss"
+
 
 # Only pages listed here will be shown in the header
 # header_pages:
@@ -10,10 +16,11 @@ theme: minima
 #   - contact.md
 #   - resources.md
 
+# Social media links
 linkedin_username: bweiss
 github_username: barweiss45
-email: my_email@email.com
-author: Barry Weiss
+
+
 
 show_excerpts: true
 page_excerpts: true
