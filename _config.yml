@@ -9,7 +9,6 @@ theme: "minima"
 email: "my_email@email.com"
 author: "Barry Weiss"
 
-
 # Only pages listed here will be shown in the header
 # header_pages:
 #   - about.md
@@ -19,8 +18,6 @@ author: "Barry Weiss"
 # Social media links
 linkedin_username: bweiss
 github_username: barweiss45
-
-
 
 show_excerpts: true
 page_excerpts: true
