@@ -63,11 +63,9 @@ These notes cover essential concepts such as creating and structuring basic Bash
   - [Matching Lines Exactly](#matching-lines-exactly)
     - [Exact Line Match](#exact-line-match)
   - [Recursive Search](#recursive-search)
-    - [Recursive Search](#recursive-search-1)
   - [Displaying Only Filenames](#displaying-only-filenames)
     - [Show Filenames Only](#show-filenames-only)
   - [Context Lines](#context-lines)
-    - [Context Lines](#context-lines-1)
   - [Extended Regular Expressions](#extended-regular-expressions)
     - [Extended Regex](#extended-regex)
   - [Grep with Pipes](#grep-with-pipes)
@@ -79,7 +77,7 @@ These notes cover essential concepts such as creating and structuring basic Bash
     - [Counting TODO Comments in Code](#counting-todo-comments-in-code)
   - [Practical Example: Check for a Regular File](#practical-example-check-for-a-regular-file)
 - [Awk command](#awk-command)
-  - [Basic Syntax and Usage](#basic-syntax-and-usage-1)
+  - [Basic Syntax and Usage for `awk`](#basic-syntax-and-usage-for-awk)
     - [Print Specific Columns](#print-specific-columns)
     - [Print Lines Matching a Pattern](#print-lines-matching-a-pattern)
   - [Field Separator](#field-separator)
@@ -96,7 +94,6 @@ These notes cover essential concepts such as creating and structuring basic Bash
   - [Writing to Files](#writing-to-files)
     - [Redirect Output](#redirect-output)
   - [BEGIN and END Blocks](#begin-and-end-blocks)
-    - [BEGIN and END Blocks](#begin-and-end-blocks-1)
   - [Regular Expressions in `awk`](#regular-expressions-in-awk)
   - [Basic Regex Syntax in `awk`](#basic-regex-syntax-in-awk)
   - [Finding Patterns](#finding-patterns)
@@ -117,7 +114,6 @@ These notes cover essential concepts such as creating and structuring basic Bash
     - [Using Backreferences](#using-backreferences)
   - [Practical Example: Log File Analysis](#practical-example-log-file-analysis)
   - [Case-Insensitive Matching](#case-insensitive-matching)
-    - [Case-Insensitive Search](#case-insensitive-search-1)
   - [Combining Conditions and Patterns](#combining-conditions-and-patterns)
     - [Complex Condition](#complex-condition)
 - [Parsing output from Commands with `awk`](#parsing-output-from-commands-with-awk)
@@ -136,7 +132,7 @@ These notes cover essential concepts such as creating and structuring basic Bash
     - [Using Variables](#using-variables)
     - [Using Functions](#using-functions)
 - [Sed Command](#sed-command)
-  - [Basic Syntax and Usage](#basic-syntax-and-usage-2)
+  - [Basic Syntax and Usage of `sed`](#basic-syntax-and-usage-of-sed)
   - [Basic Substitution](#basic-substitution)
     - [Substituting Text](#substituting-text-1)
     - [Global Substitution](#global-substitution)
@@ -176,7 +172,7 @@ These notes cover essential concepts such as creating and structuring basic Bash
     - [Example: Replacing with Dynamic Content](#example-replacing-with-dynamic-content)
   - [Handling Special Characters In multiline replacement](#handling-special-characters-in-multiline-replacement)
     - [Example: Handling Slashes](#example-handling-slashes)
-    - [Summary of multi-line substitution.](#summary-of-multi-line-substitution)
+    - [Summary of multi-line substitution](#summary-of-multi-line-substitution)
   - [Using Sed Scripts](#using-sed-scripts)
   - [Practical Example: Extracting IP Addresses](#practical-example-extracting-ip-addresses)
 - [Read command](#read-command)
@@ -195,6 +191,7 @@ These notes cover essential concepts such as creating and structuring basic Bash
     - [Example: Function with Prompt and Silent Mode](#example-function-with-prompt-and-silent-mode)
   - [Using `read` for Multiple Inputs in Functions](#using-read-for-multiple-inputs-in-functions)
     - [Example: Function to Collect User Details](#example-function-to-collect-user-details)
+  - [Using `read` with Arrays in Functions](#using-read-with-arrays-in-functions)
     - [Example: Reading Multiple Words into an Array](#example-reading-multiple-words-into-an-array)
   - [Practical Example: Function with User Input Validation](#practical-example-function-with-user-input-validation)
     - [Example: Validate Age Input](#example-validate-age-input)
@@ -292,7 +289,7 @@ BASH (Bourne Again SHell) is a command language interpreter for the GNU operatin
 
 ### Conditional Statements
 
-See section [If-Else Statement Conditionals](#If-Else-Statement-Conditionals) for more details.
+See section [If-Else Statement Conditionals](#if-else-statement-conditionals) for more details.
 
 #### If-Else Statement
 
@@ -488,6 +485,7 @@ In this example, `local_var` is only accessible within the function `print_var`,
 In BASH, functions can accept arguments, similar to how scripts can accept command-line arguments. Inside the function, these arguments are accessible using special positional parameters like `$1`, `$2`, etc., where `$1` represents the first argument, `$2` the second, and so on.
 
 **Example:**
+
 ```bash
 #!/bin/bash
 
@@ -500,6 +498,7 @@ greet "Barry"  # Calls the function with "Barry" as the argument
 ```
 
 In this example:
+
 - The `greet` function takes one argument, which is stored in the variable `name`.
 - `local` is used to declare `name` as a local variable, meaning its value is confined to the function's scope.
 - The function is then called with the argument "Barry", so `name` becomes "Barry", and the function prints "Hello, Barry!".
@@ -509,9 +508,11 @@ In this example:
 Sometimes you want a function to have default behavior even if certain arguments are not provided. In BASH, you can set default values for function arguments using parameter expansion.
 
 **Syntax for Default Values:**
+
 - `${parameter:-default_value}`: If `parameter` is not set or is null, use `default_value`.
 
 **Example with Default Values:**
+
 ```bash
 #!/bin/bash
 
@@ -525,6 +526,7 @@ greet          # Calls the function without an argument
 ```
 
 In this example:
+
 - `${1:-Guest}` is used to set the variable `name`. If the first argument `$1` is provided, `name` is set to `$1`. If no argument is provided, `name` defaults to "Guest".
 - When `greet "Barry"` is called, `name` is set to "Barry", and the function prints "Hello, Barry!".
 - When `greet` is called without an argument, `name` defaults to "Guest", and the function prints "Hello, Guest!".
@@ -532,6 +534,7 @@ In this example:
 **Why Use Default Values?**
 
 Using default values is helpful for:
+
 - Providing a fallback when no argument is given.
 - Simplifying function calls by not requiring every argument to be specified.
 - Enhancing the function's robustness and usability.
@@ -551,6 +554,7 @@ greet          # Output: Hello, Guest!
 ```
 
 **Explanation:**
+
 1. **Function Definition (`greet`)**:
    - `local name=${1:-Guest}`: Declares a local variable `name`. It uses `${1:-Guest}` to set `name` to the first argument (`$1`) if provided, or "Guest" if not.
 2. **Function Calls**:
@@ -582,6 +586,7 @@ This script defines a function `check_file` that takes a file path as an argumen
 ### Practical Example: Processing Output
 
 #### Factorial Calculation and Decision Making
+
 A more practical example is where a function processes some data and the result is used for further action. We'll create a function that calculates the factorial of a number and then use that result to determine if the number is large or small.
 
 ```bash
@@ -614,15 +619,16 @@ fi
 
 **In this example:**
 
-* The calculate_factorial function computes the factorial of a given number and echoes the result.
-* The script captures the factorial result using `factorial_result=$(calculate_factorial $number)`.
-* The captured result is then used to determine if the number is considered "big" or "manageable" based on a threshold (120 in this case).
+- The calculate_factorial function computes the factorial of a given number and echoes the result.
+- The script captures the factorial result using `factorial_result=$(calculate_factorial $number)`.
+- The captured result is then used to determine if the number is considered "big" or "manageable" based on a threshold (120 in this case).
 
 ### Practical Example: Output in Complex Scripts
 
 #### Data Validation and Processing
 
 For more complex scripts, you might have multiple functions and need to pass data between them. Let's look at an example where we have two functions: one for data validation and another for data processing.
+
 ```bash
 #!/bin/bash
 
@@ -658,10 +664,10 @@ fi
 
 **In this script:**
 
-* The `validate_email` function checks if the provided email address matches a regular expression for a valid email format. It echoes "valid" or "invalid" based on the validation.
-* The `process_email` function simulates processing a valid email.
-* The main script captures the validation result using `validation_result=$(validate_email $user_email)`.
-* Depending on the validation result, the script either processes the email or asks the user to try again.
+- The `validate_email` function checks if the provided email address matches a regular expression for a valid email format. It echoes "valid" or "invalid" based on the validation.
+- The `process_email` function simulates processing a valid email.
+- The main script captures the validation result using `validation_result=$(validate_email $user_email)`.
+- Depending on the validation result, the script either processes the email or asks the user to try again.
 
 ---
 
@@ -859,19 +865,24 @@ These operators and constructs are essential for controlling the flow of your sc
 ### Basic Syntax and Usage
 
 The basic syntax for `grep` is:
+
 ```bash
 grep [options] pattern [file...]
 ```
+
 - **`pattern`**: The string or regular expression to search for.
 - **`file...`**: One or more files to search in. If no file is specified, `grep` searches the standard input.
 
 ### Simple Search
 
 #### Search for a Word
+
 To search for the word "apple" in a file:
+
 ```bash
 grep "apple" file.txt
 ```
+
 This command will print all lines containing the word "apple" from `file.txt`.
 
 ### Using Regular Expressions
@@ -879,7 +890,9 @@ This command will print all lines containing the word "apple" from `file.txt`.
 `grep` supports regular expressions, which allow for more complex search patterns.
 
 #### Search for a Pattern
+
 To find lines containing a three-digit number:
+
 ```bash
 grep "[0-9]\{3\}" file.txt
 ```
@@ -889,9 +902,11 @@ grep "[0-9]\{3\}" file.txt
 By default, `grep` is **case-sensitive**. You can make the search **case-insensitive** with the `-i` option.
 
 #### Case-Insensitive Search
+
 ```bash
 grep -i "apple" file.txt
 ```
+
 This command will match "apple", "Apple", "APPLE", etc.
 
 ### Counting Matches
@@ -899,6 +914,7 @@ This command will match "apple", "Apple", "APPLE", etc.
 The `-c` option counts the number of lines that match the pattern.
 
 #### Count Matching Lines
+
 ```bash
 grep -c "apple" file.txt
 ```
@@ -908,6 +924,7 @@ grep -c "apple" file.txt
 The `-n` option displays line numbers along with matching lines.
 
 #### Show Line Numbers
+
 ```bash
 grep -n "apple" file.txt
 ```
@@ -917,6 +934,7 @@ grep -n "apple" file.txt
 The `-v` option inverts the match, displaying lines that do not contain the pattern.
 
 #### Example 6: Invert Match
+
 ```bash
 grep -v "apple" file.txt
 ```
@@ -926,9 +944,11 @@ grep -v "apple" file.txt
 To match whole words only, use the `-w` option.
 
 #### Match Whole Words
+
 ```bash
 grep -w "apple" file.txt
 ```
+
 This will not match "apples" or "pineapple".
 
 ### Matching Lines Exactly
@@ -936,6 +956,7 @@ This will not match "apples" or "pineapple".
 To match the entire line, use the `-x` option.
 
 #### Exact Line Match
+
 ```bash
 grep -x "This is a line." file.txt
 ```
@@ -944,7 +965,6 @@ grep -x "This is a line." file.txt
 
 The `-r` (or `-R`) option allows for recursive search through directories.
 
-#### Recursive Search
 ```bash
 grep -r "apple" /path/to/directory
 ```
@@ -954,6 +974,7 @@ grep -r "apple" /path/to/directory
 The `-l` option displays only the names of files containing the matching lines.
 
 #### Show Filenames Only
+
 ```bash
 grep -l "apple" file.txt anotherfile.txt
 ```
@@ -966,10 +987,10 @@ The `-A`, `-B`, and `-C` options display lines of context around the matching li
 - **`-B n`**: Display `n` lines before the match.
 - **`-C n`**: Display `n` lines before and after the match.
 
-#### Context Lines
 ```bash
 grep -C 2 "apple" file.txt
 ```
+
 This shows 2 lines of context around each match.
 
 ### Extended Regular Expressions
@@ -977,9 +998,11 @@ This shows 2 lines of context around each match.
 The `-E` option enables extended regular expressions, allowing for more complex patterns.
 
 #### Extended Regex
+
 ```bash
 grep -E "(apple|orange)" file.txt
 ```
+
 This matches lines containing either "apple" or "orange".
 
 ### Grep with Pipes
@@ -987,9 +1010,11 @@ This matches lines containing either "apple" or "orange".
 `grep` is often used in combination with other commands using pipes.
 
 #### Using Pipes
+
 ```bash
 cat file.txt | grep "apple"
 ```
+
 This command pipes the output of `cat` into `grep`.
 
 ### Suppressing Errors
@@ -997,6 +1022,7 @@ This command pipes the output of `cat` into `grep`.
 The `-s` option suppresses error messages about nonexistent or unreadable files.
 
 #### Suppress Errors
+
 ```bash
 grep -s "apple" file.txt
 ```
@@ -1004,18 +1030,22 @@ grep -s "apple" file.txt
 ### Practical Examples
 
 #### Searching Logs for Errors
+
 To find error messages in a log file:
+
 ```bash
 grep -i "error" /var/log/syslog
 ```
 
 #### Counting TODO Comments in Code
+
 To count lines containing "TODO" in your code:
+
 ```bash
 grep -r -c "TODO" /path/to/code
 ```
 
-`grep` is a versatile tool for text searching and filtering, making it an essential part of any Linux user's toolkit. It supports a wide range of options and patterns, enabling efficient searches in files and directories. 
+`grep` is a versatile tool for text searching and filtering, making it an essential part of any Linux user's toolkit. It supports a wide range of options and patterns, enabling efficient searches in files and directories.
 
 ---
 
@@ -1040,16 +1070,19 @@ else
     echo "The file '$file_name' does not exist or is not a regular file in the directory '$dir_path'."
 fi
 ```
+
 ---
 
 ## Awk command
 
 `awk` is a powerful text-processing tool in Unix/Linux that allows you to manipulate and analyze text files. It's particularly useful for working with columns of data.
 
-### Basic Syntax and Usage
+### Basic Syntax and Usage for `awk`
+
 `awk` operates on a per-line basis, treating each line of input as a record. Fields within these records are separated by delimiters (default is whitespace).
 
 Basic syntax:
+
 ```bash
 awk 'pattern { action }' input_file
 ```
@@ -1060,21 +1093,27 @@ awk 'pattern { action }' input_file
 If no pattern is specified, `awk` performs the action on all lines.
 
 #### Print Specific Columns
+
 To print the first column of a file:
+
 ```bash
 awk '{ print $1 }' file.txt
 ```
+
 - `$1` refers to the first field (column), `$2` to the second, and so on. `$0` refers to the entire line.
 
 #### Print Lines Matching a Pattern
+
 To print lines where the first column is greater than 50:
+
 ```bash
 awk '$1 > 50' file.txt
 ```
 
 Print the first 10 lines of a file where $1 is an integer.
+
 ```bash
-barweiss@rcd09-c1-vm-dev-01:~/dev/awk_testing$ awk '$1 < 10' tabular_data.txt 
+user@host:~/dev/awk_testing$ awk '$1 < 10' tabular_data.txt 
 1       Auberon Forri   aforri0@canalblog.com   Male    200.109.190.92
 2       Slade   Lemonby slemonby1@arstechnica.com       Male    244.26.222.3
 3       Elfrida Gaitskell       egaitskell2@unc.edu     Female  28.131.115.188
@@ -1087,25 +1126,32 @@ barweiss@rcd09-c1-vm-dev-01:~/dev/awk_testing$ awk '$1 < 10' tabular_data.txt
 ```
 
 ### Field Separator
+
 You can specify a different field separator using the `-F` option.
 
 #### Custom Field Separator
+
 If your data is comma-separated:
+
 ```bash
 awk -F, '{ print $1 }' file.csv
 ```
 
 ### Built-in Variables
+
 `awk` has several built-in variables that are useful for text processing:
 
 - **`NR`**: Current record number (line number).
 - **`NF`**: Number of fields in the current record.
 
 #### Print Line Number and Content
+
 ```bash
 awk '{ print NR, $0 }' file.txt
 ```
+
 This example will print each line in the file with a line number before it:
+
 ```bash
 $ awk '{ print NR, $0 }' tabular_data.txt 
 1 id    first_name      last_name       email   gender  ip_address
@@ -1121,56 +1167,73 @@ $ awk '{ print NR, $0 }' tabular_data.txt
 ```
 
 ### Arithmetic Operations
+
 You can perform arithmetic operations within `awk`.
 
 #### Sum a Column
+
 To sum the values in the second column:
+
 ```bash
 awk '{ sum += $2 } END { print sum }' file.txt
 ```
+
 - `END` specifies the action to be taken after all lines have been processed.
 
 ### Advanced Pattern Matching
+
 You can use regular expressions for pattern matching.
 
 #### Lines Containing a Specific String
+
 To print lines containing the string "error":
+
 ```bash
 awk '/error/' file.txt
 ```
 
 #### Start and End Pattern Matching
+
 Print all lines between lines containing "start" and "end":
+
 ```bash
 awk '/start/,/end/' file.txt
 ```
 
 ### User-defined Functions and External Commands
+
 You can define functions within `awk` or call external commands.
 
 #### External Command
+
 To execute a shell command:
+
 ```bash
 awk '{ system("date") }' file.txt
 ```
 
 ### Writing to Files
+
 You can redirect output to a file.
 
 #### Redirect Output
+
 To save the first column to a file:
+
 ```bash
 awk '{ print $1 > "output.txt" }' file.txt
 ```
 
 ### BEGIN and END Blocks
+
 `BEGIN` and `END` blocks execute before and after the main processing loop, respectively.
 
-#### BEGIN and END Blocks
 ```bash
 awk 'BEGIN { print "Start" } { print $1 } END { print "End" }' file.txt
 ```
+
 ### Regular Expressions in `awk`
+
 Regular expressions are powerful tools for searching and manipulating text based on patterns.
 
 ### Basic Regex Syntax in `awk`
@@ -1192,6 +1255,7 @@ In `awk`, regular expressions are enclosed between slashes `/.../`. Here are som
 #### Matching Lines Containing a Specific Word**
 
 To find lines containing the word "error":
+
 ```bash
 awk '/error/' file.txt
 ```
@@ -1199,6 +1263,7 @@ awk '/error/' file.txt
 #### Matching Lines Starting with a Specific Word
 
 To find lines that start with "Start":
+
 ```bash
 awk '/^Start/' file.txt
 ```
@@ -1206,6 +1271,7 @@ awk '/^Start/' file.txt
 #### Matching Lines Ending with a Specific Word**
 
 To find lines ending with "end":
+
 ```bash
 awk '/end$/' file.txt
 ```
@@ -1213,6 +1279,7 @@ awk '/end$/' file.txt
 #### Matching Lines with a Specific Pattern
 
 To find lines containing a three-digit number:
+
 ```bash
 awk '/[0-9]{3}/' file.txt
 ```
@@ -1224,9 +1291,11 @@ You can use regex to match patterns within specific fields.
 #### Example 5: Matching a Pattern in a Specific Column
 
 To find lines where the second column contains "error":
+
 ```bash
 awk '$2 ~ /error/' file.txt
 ```
+
 - The `~` operator matches the field against the regex.
 
 ### Using Regex in BEGIN and END Blocks
@@ -1236,21 +1305,26 @@ Regex can be used in BEGIN and END blocks for initializing or finalizing conditi
 #### Counting Lines Matching a Pattern**
 
 To count the number of lines containing "error":
+
 ```bash
 awk 'BEGIN { count=0 } /error/ { count++ } END { print count }' file.txt
 ```
 
-### Inverting Matches
+### Inverting Matches 
 
 To select lines that do not match a pattern, use the `!~` operator.
 
 #### Excluding Lines Matching a Pattern
 
 To find lines that do not contain "error":
+
 ```bash
 awk '!/error/' file.txt
+
 ```
+
 Or, for excluding in a specific column:
+
 ```bash
 awk '$2 !~ /error/' file.txt
 ```
@@ -1262,6 +1336,7 @@ You can combine regex with actions for more complex processing.
 #### Extracting and Modifying Data
 
 To extract the first and second columns of lines containing "error" and transform them:
+
 ```bash
 awk '/error/ { print $1, $2 " - ERROR FOUND" }' file.txt
 ```
@@ -1269,9 +1344,11 @@ awk '/error/ { print $1, $2 " - ERROR FOUND" }' file.txt
 #### Substituting Text
 
 To replace "error" with "ERROR" in the entire line:
+
 ```bash
 awk '{ gsub(/error/, "ERROR"); print }' file.txt
 ```
+
 - `gsub` is a function that globally substitutes a pattern with a replacement.
 
 ### Advanced Regex Features
@@ -1279,9 +1356,11 @@ awk '{ gsub(/error/, "ERROR"); print }' file.txt
 #### Using Backreferences
 
 To find lines where the same word appears twice consecutively:
+
 ```bash
 awk '/\b([a-zA-Z]+) \1\b/' file.txt
 ```
+
 - `\b` denotes word boundaries, and `\1` refers to the first captured group.
 
 ### Practical Example: Log File Analysis
@@ -1291,13 +1370,12 @@ Imagine you have a log file and want to extract error messages with timestamps.
 ```bash
 awk '/ERROR/ { print $1, $2, $3, $0 }' logfile.txt
 ```
+
 - Here, `$1`, `$2`, and `$3` could be the date and time fields, and `$0` prints the entire line.
 
 ### Case-Insensitive Matching
 
 To perform case-insensitive matching, use the `IGNORECASE` variable.
-
-#### Case-Insensitive Search
 
 ```bash
 awk 'BEGIN { IGNORECASE=1 } /error/' file.txt
@@ -1314,13 +1392,17 @@ To find lines where the first column contains "INFO" and the line also contains 
 ```bash
 awk '$1 ~ /INFO/ && /success/' file.txt
 ```
+
 ## Parsing output from Commands with `awk`
+
 You can use awk to parse the output from commands like ls and `grep`. This is a common practice in shell scripting to further process and format command output. `awk` is particularly useful for extracting specific fields or performing calculations on data.
 
 ### Parsing `ls` Output with `awk`
+
 The `ls` command lists directory contents. You can use `awk` to extract specific details from this output.
 
 #### Extracting Filenames
+
 To list only the filenames:
 
 ```bash
@@ -1330,6 +1412,7 @@ ls -l | awk '{ print $9 }'
 Here, `$9` represents the ninth field, which is typically the filename in the long listing format of `ls` (`ls -l`).
 
 #### Extracting File Sizes
+
 To list filenames along with their sizes:
 
 ```bash
@@ -1339,6 +1422,7 @@ ls -l | awk '{ print $5, $9 }'
 The `$5` is the size of the file, and `$9` is the filename.
 
 #### Total Size of Files
+
 To calculate the total size of all files:
 
 ```bash
@@ -1348,6 +1432,7 @@ ls -l | awk '{ total += $5 } END { print total }'
 This sums up the sizes in the fifth column and prints the total at the end.
 
 ### Parsing `grep` Output with `awk`
+
 The grep command searches for patterns in files. You can use awk to further filter or format the output.
 
 #### Extracting Line Numbers
@@ -1383,6 +1468,7 @@ ls -l | awk '$5 > 1000 { print $9, $5 }'
 This filters files based on their size and prints the filename and size.
 
 #### Find and Extract Specific Information
+
 To find lines containing a specific pattern in a file and extract a particular column:
 
 ```bash
@@ -1392,17 +1478,19 @@ grep "pattern" file.txt | awk '{ print $3 }'
 This extracts the third field from lines containing the pattern.
 
 #### Practical Example: Disk Usage Analysis
+
 To list the size and name of the top 5 largest files in the current directory:
 
 ```bash
 ls -lS | awk 'NR>1 { print $5, $9 }' | head -5
 ```
 
-* **ls -lS** sorts files by size in descending order.
-* **NR>1** skips the first line, which is the total count line in `ls -l` output.
-* **head -5** limits the output to the top 5 files.
+- **ls -lS** sorts files by size in descending order.
+- **NR>1** skips the first line, which is the total count line in `ls -l` output.
+- **head -5** limits the output to the top 5 files.
 
 ### Using Variables and Functions with `awk`
+
 You can define variables and functions within awk to process data more efficiently.
 
 #### Using Variables
@@ -1426,52 +1514,63 @@ Using awk in conjunction with other commands like ls and grep allows for powerfu
 
 ## Sed Command
 
-`sed`, short for "stream editor," is another powerful tool in Unix/Linux for parsing and transforming text. It's particularly useful for substitution, deletion, and insertion of text in a non-interactive manner. 
+`sed`, short for "stream editor," is another powerful tool in Unix/Linux for parsing and transforming text. It's particularly useful for substitution, deletion, and insertion of text in a non-interactive manner.
 
-### Basic Syntax and Usage
+### Basic Syntax and Usage of `sed`
+
 The basic syntax for `sed` is:
+
 ```bash
 sed 'command' file
 ```
+
 - **`command`**: Specifies the action `sed` should take on the input.
 
 ### Basic Substitution
 
 #### Substituting Text
+
 To replace "foo" with "bar" in a file:
+
 ```bash
 sed 's/foo/bar/' file.txt
 ```
+
 - `s`: Stands for "substitute."
 - `foo`: The search pattern.
 - `bar`: The replacement string.
 
 #### Global Substitution
+
 To replace all occurrences of "foo" with "bar" in each line:
+
 ```bash
 sed 's/foo/bar/g' file.txt
 ```
+
 - `g`: Stands for "global," meaning all occurrences in the line.
-
-
 
 ### Using `-i` with a Backup Suffix and In-place Editing
 
 To make `sed` automatically create a backup file before editing, you can use the `-i` (in-place) option with an optional backup suffix. This suffix is appended to the original filename, creating a backup of the file before any changes are made.
 
 The syntax for using `sed` with a backup suffix is:
+
 ```bash
 sed -i.bak 's/pattern/replacement/g' file.txt
 ```
+
 - `-i.bak`: The `-i` option enables in-place editing, and `.bak` is the backup suffix.
 - `file.txt.bak`: The original file is backed up with this name.
 
 #### In-place Editing
 
 To modify the original file directly, use the `-i` option:
+
 ```bash
 sed -i 's/foo/bar/g' file.txt
 ```
+
 This command replaces "foo" with "bar" in the file `file.txt` and saves the changes.
 
 #### About Automatic Backup
@@ -1483,10 +1582,13 @@ This command replaces "foo" with "bar" in the file `file.txt` and saves the chan
 3. **Cross-Platform Considerations**: The `-i` option behaves differently on various Unix-like systems. On some systems, like macOS, you may need to use `-i ''` to indicate no backup suffix, while on others, just `-i` suffices.
 
 #### Example: Backup Before Substitution
+
 To replace the word "old" with "new" in `file.txt` and create a backup with the `.bak` suffix:
+
 ```bash
 sed -i.bak 's/old/new/g' file.txt
 ```
+
 - This command creates a backup named `file.txt.bak` before making changes to `file.txt`.
 
 #### Specifying a Custom Backup Suffix
@@ -1494,9 +1596,11 @@ sed -i.bak 's/old/new/g' file.txt
 You can specify any string as a backup suffix. It's good practice to use a suffix that clearly indicates the file is a backup.
 
 #### Example: Custom Suffix
+
 ```bash
 sed -i.backup 's/old/new/g' file.txt
 ```
+
 - This creates a backup named `file.txt.backup`.
 
 #### No Backup Suffix (Overwrites Original)
@@ -1504,34 +1608,43 @@ sed -i.backup 's/old/new/g' file.txt
 If you do not provide a suffix, `sed` will edit the file in place without creating a backup, potentially leading to data loss if something goes wrong. To avoid this, always specify a suffix if you need a backup.
 
 #### Example: No Backup
+
 ```bash
 sed -i 's/old/new/g' file.txt
 ```
 
 #### Example: macOS Syntax
+
 ```bash
 sed -i '' 's/old/new/g' file.txt
 ```
+
 - On macOS, an empty string `''` is used after `-i` to indicate no backup.
 
 Using the `-i` option with a suffix provides a convenient way to ensure that you have a backup of your original file, preventing accidental data loss. This is particularly useful when running scripts or making bulk edits across multiple files.
 
 ### Addressing Lines
+
 You can specify the line numbers or patterns to limit the scope of `sed` commands.
 
 #### Substitution on a Specific Line**
+
 To replace "foo" with "bar" only on the second line:
+
 ```bash
 sed '2s/foo/bar/' file.txt
 ```
 
 #### Substitution in a Range of Lines
+
 To replace "foo" with "bar" from line 2 to line 4:
+
 ```bash
 sed '2,4s/foo/bar/' file.txt
 ```
 
 #### Substitution Using a Pattern
+
 To replace "foo" with "bar" in lines containing "baz":
 ```bash
 sed '/baz/s/foo/bar/' file.txt
@@ -1540,12 +1653,15 @@ sed '/baz/s/foo/bar/' file.txt
 ### Deleting Lines
 
 #### Delete a Specific Line
+
 To delete the third line:
+
 ```bash
 sed '3d' file.txt
 ```
 
 #### Delete Lines Matching a Pattern
+
 To delete lines containing "error":
 ```bash
 sed '/error/d' file.txt
@@ -1554,77 +1670,102 @@ sed '/error/d' file.txt
 ### Inserting and Appending Text
 
 #### Insert Text Before a Line
+
 To insert "Hello" before the third line:
+
 ```bash
 sed '3i\Hello' file.txt
 ```
+
 - `i\`: Insert before the specified line.
 
 #### Append Text After a Line
+
 To append "World" after the third line:
+
 ```bash
 sed '3a\World' file.txt
 ```
+
 - `a\`: Append after the specified line.
 
 ### Changing Lines
 
 #### Example 10: Replace a Line
+
 To replace the third line with "New line":
+
 ```bash
 sed '3c\New line' file.txt
 ```
+
 - `c\`: Change the specified line.
 
 ### Advanced Regular Expressions with `sed`
 
 #### Matching and Substitution with Regex
+
 To replace the first digit in each line with "number":
+
 ```bash
 sed 's/[0-9]/number/' file.txt
 ```
 
 #### Grouping and Referencing
+
 To swap two words:
+
 ```bash
 sed 's/\(word1\) \(word2\)/\2 \1/' file.txt
 ```
+
 - `\(word1\)`: Captures "word1."
 - `\2 \1`: References the captured groups in the replacement.
 
 #### Using Extended Regex
+
 For more complex regex, use the `-E` option (or `-r` in some systems):
+
 ```bash
 sed -E 's/[0-9]{3}/number/g' file.txt
 ```
+
 - `-E`: Enables extended regular expressions, which allow for additional features like `+`, `?`, `{}`, etc.
 
 ### Multi-line and Contextual Operations
 
 #### Multi-line Matching
+
 `sed` typically operates on a line-by-line basis, but you can use the `N` command to match across multiple lines:
+
 ```bash
 sed 'N;s/\n/ /' file.txt
 ```
+
 - `N`: Appends the next line to the pattern space.
 
 #### Contextual Deletion
+
 To delete the line following a line containing "start":
+
 ```bash
 sed '/start/{N;d}' file.txt
 ```
 
 ### Replacing a Chunk of Lines with Sed
 
-`sed` can replace a chunk of lines in a document. You can define a range of lines to be replaced and use a placeholder or variable-like syntax for the replacement content. 
+`sed` can replace a chunk of lines in a document. You can define a range of lines to be replaced and use a placeholder or variable-like syntax for the replacement content.
 
 #### Example: Replace Lines from Line 2 to Line 4
+
 To replace lines 2 to 4 with a new block of text:
+
 ```bash
 sed '2,4c\
 This is the new content\
 spanning multiple lines' file.txt
 ```
+
 - `2,4`: Specifies the line range to be replaced.
 - `c\`: Stands for "change" and replaces the specified lines with the following content.
 
@@ -1633,28 +1774,37 @@ spanning multiple lines' file.txt
 While `sed` itself doesn't directly support variables as you might use in programming languages, you can achieve similar functionality by using shell variables and command substitution. Here's an example:
 
 #### Example: Using a Shell Variable
+
 Suppose you have a shell variable `NEW_CONTENT` containing the new text:
+
 ```bash
 NEW_CONTENT="This is the new content
 spanning multiple lines"
 ```
+
 You can use this variable with `sed` as follows:
+
 ```bash
 sed "2,4c\\
 $NEW_CONTENT" file.txt
 ```
+
 - The backslash (`\`) after `c` and before the variable ensures that the entire variable content is treated as a single block.
 
 ### Complex Example Multiline Replacement with Dynamic Content
+
 If you want to replace lines dynamically based on some conditions or external data, you can use command substitution or `here documents`.
 
 #### Example: Replacing with Dynamic Content
+
 Suppose you have a file `replacement.txt` with the content you want to insert:
+
 ```bash
 replacement=$(cat replacement.txt)
 sed "2,4c\\
 $replacement" file.txt
 ```
+
 Here, `cat replacement.txt` reads the file content, and the variable `replacement` is used in the `sed` command.
 
 ### Handling Special Characters In multiline replacement
@@ -1662,11 +1812,13 @@ Here, `cat replacement.txt` reads the file content, and the variable `replacemen
 If your replacement content contains special characters (like slashes or backslashes), you may need to escape them or use different delimiters. For instance, if the content includes slashes (`/`), you can use a different delimiter for the `sed` substitution, like `|`.
 
 #### Example: Handling Slashes
+
 ```bash
 sed '2,4c|This is the new content with /slashes/|' file.txt
 ```
 
-#### Summary of multi-line substitution.
+#### Summary of multi-line substitution
+
 - **Line Range (`m,n`)**: Specifies the chunk of lines to operate on.
 - **Change Command (`c\`)**: Replaces the specified line range with new content.
 - **Shell Variables and Command Substitution**: Allow for dynamic or external data to be used as replacement content.
@@ -1676,17 +1828,21 @@ Using these techniques, you can effectively replace chunks of text in a file wit
 ### Using Sed Scripts
 
 For complex operations, you can write a `sed` script and save it in a file:
+
 ```bash
 sed -f script.sed file.txt
 ```
+
 - The `script.sed` file can contain multiple `sed` commands.
 
 ### Practical Example: Extracting IP Addresses
 
 To extract IP addresses from a file:
+
 ```bash
 sed -nE 's/.*([0-9]{1,3}\.){3}[0-9]{1,3}.*/\0/p' file.txt
 ```
+
 - `-n`: Suppresses automatic printing of lines.
 - `p`: Prints only the matched lines.
 
@@ -1711,6 +1867,7 @@ echo "Hello, $name!"
 ```
 
 In this example:
+
 - `read name`: The `read` command waits for the user to input a line of text. The input is then stored in the variable `name`.
 - `echo "Hello, $name!"`: This line prints the greeting with the user's name.
 
@@ -1841,6 +1998,7 @@ get_name_and_greet
 ```
 
 In this example:
+
 - The function `get_name_and_greet` uses `read` to capture the user's input and stores it in the variable `name`.
 - The function then greets the user by name.
 
@@ -1867,6 +2025,7 @@ get_credentials
 ```
 
 Here:
+
 - `read -p "Enter your username: " username` prompts the user for a username and stores it in `username`.
 - `read -sp "Enter your password: " password` prompts for a password in silent mode (input is not shown on screen) and stores it in `password`.
 
@@ -1896,7 +2055,7 @@ get_user_details
 
 This function collects the first name, last name, and age from the user and then displays the collected information.
 
-###Using `read` with Arrays in Functions
+### Using `read` with Arrays in Functions
 
 You can use `read` to populate arrays within functions, making it easy to handle multiple values.
 
@@ -1945,11 +2104,13 @@ get_valid_age
 ```
 
 In this example:
+
 - The function `get_valid_age` prompts the user for their age.
 - It uses a `while true` loop to repeatedly ask for the input until a valid positive integer is provided.
 - The regex `^[0-9]+$` ensures that only numeric input is accepted, and the `[ "$age" -gt 0 ]` check ensures that the age is positive.
 
 ---
+
 ## Case command
 
 The `case` statement in BASH scripting is used to simplify conditional execution based on the value of a variable. It’s similar to the `switch` statement in other programming languages. The `case` statement allows you to match a variable against several patterns, executing corresponding commands for the first matching pattern.
@@ -2062,6 +2223,7 @@ esac
 ```
 
 In this example:
+
 - The script displays a menu and prompts the user for a choice.
 - The `case` statement handles the user’s selection and performs the corresponding action.
 - If the user enters an invalid option, the default case is executed, displaying an error message and exiting the script.
@@ -2083,34 +2245,43 @@ There are three standard streams in Unix-like systems:
 ### Basic Redirection Operators
 
 - **`>`**: Redirects stdout to a file. If the file exists, it's overwritten.
+
   ```bash
   ls > output.txt
   ```
+
   This command redirects the output of `ls` to `output.txt`.
 
 - **`>>`**: Appends stdout to a file. If the file doesn't exist, it's created.
+
   ```bash
   echo "Hello" >> output.txt
   ```
 
 - **`<`**: Redirects a file to stdin.
+
   ```bash
   wc -l < output.txt
   ```
+
   This command counts the lines in `output.txt`.
 
 ### Redirecting stderr and stdout
 
 - **`2>`**: Redirects stderr to a file.
+
   ```bash
   ls nonexistentfile 2> error.txt
   ```
+
   This command redirects the error message (because `nonexistentfile` does not exist) to `error.txt`.
 
 - **`&>`**: Redirects both stdout and stderr to a file (BASH only).
+
   ```bash
   ls existingfile nonexistentfile &> all_output.txt
   ```
+
   This command redirects both the output of the successful `ls` command and the error message to `all_output.txt`.
 
 ### File Descriptor Manipulation
@@ -2120,31 +2291,39 @@ There are three standard streams in Unix-like systems:
 #### Examples and Explanation
 
 - **Redirecting stderr to stdout (`2>&1`)**:
+
   ```bash
   ls existingfile nonexistentfile > all_output.txt 2>&1
   ```
+
   In this command:
+
   - `>` redirects stdout to `all_output.txt`.
   - `2>&1` redirects stderr (file descriptor 2) to wherever stdout (file descriptor 1) is currently going, which is `all_output.txt`.
 
   This means both the normal output and error messages are written to `all_output.txt`.
 
 - **Separating stdout and stderr**:
+
   ```bash
   command >stdout.txt 2>stderr.txt
   ```
+
   Here, stdout is redirected to `stdout.txt` and stderr to `stderr.txt`.
 
 - **Discarding output using `/dev/null`**:
+
   ```bash
   command > /dev/null 2>&1
   ```
+
   - `/dev/null` is a special file that discards all data written to it. 
   - This command effectively silences all output and error messages from `command`.
 
 ### Advanced Redirection Techniques
 
 - **Redirecting a file descriptor to another before a command runs**:
+
   ```bash
   exec 3>&1
   exec > output.log
@@ -2152,6 +2331,7 @@ There are three standard streams in Unix-like systems:
   exec >&3
   exec 3>&-
   ```
+
   - `exec 3>&1` saves the current stdout to file descriptor 3.
   - `exec > output.log` redirects all stdout to `output.log`.
   - `command` runs with its stdout going to `output.log`.
@@ -2159,14 +2339,16 @@ There are three standard streams in Unix-like systems:
   - `exec 3>&-` closes file descriptor 3.
 
 - **Using process substitution for redirection**:
+
   ```bash
   diff <(ls dir1) <(ls dir2)
   ```
+
   - `<(...)` creates a temporary named pipe and passes it to `diff`. The contents of the directories `dir1` and `dir2` are compared.
 
 ### Practical Applications
 
-- **Logging**: 
+- **Logging**:
   - Capture the output of a script to a log file while also capturing errors separately.
 
 - **Debugging**:
@@ -2189,21 +2371,27 @@ You use the `>>` redirection operator to append output to a log file (or any oth
 Here's how you can use `>>` to append output:
 
 1. **Appending stdout to a log file:**
+
    ```bash
    echo "This is a log message" >> logfile.txt
    ```
+
    This command appends the string "This is a log message" to `logfile.txt`.
 
 2. **Appending stderr to a log file:**
+
    ```bash
    command_that_might_fail 2>> error_log.txt
    ```
+
    This appends any error messages produced by `command_that_might_fail` to `error_log.txt`.
 
 3. **Appending both stdout and stderr to the same log file:**
+
    ```bash
    command >> log.txt 2>&1
    ```
+
    - `command >> log.txt` appends stdout to `log.txt`.
    - `2>&1` redirects stderr (file descriptor 2) to the same location as stdout (file descriptor 1), effectively appending both stdout and stderr to `log.txt`.
 
@@ -2230,6 +2418,7 @@ echo "Script completed." >> "$logfile"
 ```
 
 In this script:
+
 - `$(date)` gets the current date and time, which is appended as a header in the log file.
 - `first_command` and `second_command` represent commands whose output (both stdout and stderr) is logged.
 
@@ -2240,5 +2429,3 @@ In this script:
 - **Separation of Concerns**: You can keep separate logs for stdout and stderr or combine them, depending on your needs.
 
 This technique is fundamental in system administration, scripting, and any scenario where maintaining a history of events or outputs is essential.
-
----
