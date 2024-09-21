@@ -1,5 +1,5 @@
 ---
-title: "Pandas Cheat Sheet"
+title: "Python - Pandas Cheat Sheet"
 layout: post
 ---
 

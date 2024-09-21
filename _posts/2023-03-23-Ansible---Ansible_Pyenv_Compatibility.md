@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ansible Pyenv Compatibility
+title: "Ansible - Ansible Pyenv Compatibility"
 author: Barry
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Dependency Inversion Principle"
+title: "Software Development - Dependency Inversion Principle"
 layout: post
 ---
 
