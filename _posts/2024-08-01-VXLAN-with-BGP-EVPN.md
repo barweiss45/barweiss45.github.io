@@ -5,7 +5,7 @@ layout: post
 
 **EVPN (Ethernet VPN)** with **VXLAN (Virtual Extensible LAN)** is a network virtualization technology that allows you to extend Layer 2 networks across Layer 3 boundaries. This is particularly useful in data center environments for creating scalable and flexible network architectures. 
 
-### Key Components
+## Key Components
 
 1. **VNI (VXLAN Network Identifier)**:
    - A 24-bit identifier used to identify a specific VXLAN segment.
@@ -22,7 +22,7 @@ layout: post
    - The device (or interface) that encapsulates and decapsulates VXLAN traffic.
    - Each VTEP has an IP address used for routing VXLAN traffic over the IP network.
 
-### Supporting Components
+## Supporting Components
 
 1. **MP-BGP (Multiprotocol BGP)**:
    - Used for distributing EVPN routes. MP-BGP allows for the exchange of EVPN information between VTEPs.
@@ -34,9 +34,9 @@ layout: post
 3. **Data Plane**:
    - VXLAN is the data plane encapsulation mechanism that carries Ethernet frames in IP packets.
 
-### Configuration Steps
+## Configuration Steps
 
-#### Leaf Switch
+### Leaf Switch
 
 1. **Enable Features**:
 
@@ -62,7 +62,7 @@ layout: post
      route-target both auto
    ```
 
-3. **Configure the NVE Interface**:
+4. **Configure the NVE Interface**:
    **NOTE** For VXLAN EVPN ingress replication, the VXLAN VTEP uses a list of IP addresses of other VTEPs in the network to send BUM (broadcast, unknown unicast and multicast) traffic. These IP addresses are exchanged between VTEPs through the BGP EVPN control plane.
 
    The following are required before configuring VXLAN EVPN ingress replication on the NVE interface:
@@ -71,19 +71,19 @@ layout: post
    - Configure BGP on the VTEP.
    - Configure RD and Route Targets for VXLAN Bridging.
 
-   ```bash
-   interface nve1
-     no shutdown
-     source-interface loopback1
-     member vni 5000
-       ingress-replication protocol bgp
-   ```
+     ```bash
+     interface nve1
+       no shutdown
+       source-interface loopback1
+       member vni 5000
+         ingress-replication protocol bgp
+     ```
 
 ### Spine
 
 To build the VXLAN tunnels VXLAN is not configured on the spine, but the underlay network must be set up with MP-BGP to exchange VXLAN routes in the l2vpn evpn address family.
 
-### Key Points
+### Key Points about Configuring VXLAN
 
 - **NVE Interface**: This is where VXLAN encapsulation and decapsulation happen.
 - **VNI**: Identifies the VXLAN segment, allowing isolation of traffic similar to VLANs but with a much larger scale.
@@ -130,7 +130,7 @@ VPN-VXLAN shares many concepts with VPLS (Virtual Private LAN Service) and L3VPN
    - **VXLAN-EVPN**: Commonly used in data center environments for network virtualization and cloud infrastructure.
    - **VPLS/L3VPN MPLS**: Often used by service providers for delivering VPN services across wide area networks (WANs).
 
-### Example Comparison
+### Example Comparison VXLAN EVPN to L3VPN MPLS and VPLS
 
 Here's a brief example to illustrate the similarities and differences:
 
@@ -183,7 +183,7 @@ Here's a brief example to illustrate the similarities and differences:
        neighbor 192.168.1.1 activate
    ```
 
-### Key Points
+#### Key Points regarding EVPN-VXLAN and VPLS/L3VPN MPLS
 
 - **EVPN-VXLAN**: Provides Layer 2 extension and Layer 3 routing over an IP network using VXLAN encapsulation and EVPN as the control plane.
 - **VPLS/L3VPN MPLS**: Provides Layer 2 or Layer 3 VPN services over an MPLS network using label switching.
@@ -270,11 +270,13 @@ Topology ID   Topology Name   Attributes
 4294967294    GLOBAL          N/A
 4294967295    ALL             N/A
 ```
+
 ### show nve peers control-plane-vni peer-ip [ip-address]
 
 Displays the egress VNI or downstream VNI for each NVE adjacency.
 
 #### Example
+
 ```
 leaf-1# show nve peers con
 control-plane       control-plane-vni
