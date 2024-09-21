@@ -3,8 +3,9 @@ title: "Software Development - Dependency Inversion Principle"
 layout: post
 ---
 
-## Explanaiton
 The **Dependency Inversion Principle** (DIP) is a programming concept that encourages developers to write more flexible and reusable code.
+
+## Example of Dependency Inversion Principle
 
 Here's an easy way to understand it:
 
@@ -18,7 +19,7 @@ You need to use an inversion of control technique to make this happen. This mean
 
 Here's a diagram to help illustrate the idea:
 
-```
+```text
   High-level Module           Abstraction           Low-level Module
   ----------------           -----------           ----------------
       uses                       uses                  implements
