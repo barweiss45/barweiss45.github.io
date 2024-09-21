@@ -1,5 +1,5 @@
 ---
-title: "Using the `dig` (Domain Information Groper) Command"
+title: "Linux - Using the `dig` (Domain Information Groper) Command"
 layout: post
 ---
 
