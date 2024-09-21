@@ -1,5 +1,5 @@
 ---
-title: "Code  Snippets"
+title: "Python Code Snippets from Previous Projects"
 layout: post
 ---
 
