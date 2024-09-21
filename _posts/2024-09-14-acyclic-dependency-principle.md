@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "Acyclic Dependency Principle - ADP"
+title: "Software Development - Acyclic Dependency Principle - ADP"
 author: Barry
 ---
 
-## Overview
 The acyclic dependency principle (ADP) is a software development principle that manages how different parts of software depend on each other.
 
 ADP means that parts of software can't depend on each other in a circle. This helps make sure that if you change one part of the software, it doesn't break another part.
@@ -18,6 +17,7 @@ To fix this, you can separate the parts or make a new way for them to talk to ea
 Overall, the acyclic dependency principle helps software developers build better code that is easier to change and understand.
 
 ## Detail Explanation
+
 The acyclic dependency principle, also known as ADP, is a software development principle that deals with managing dependencies between different software system components.
 
 In simple terms, ADP states that dependencies between components must not form a cycle. In other words, if component A depends on component B, then component B must not depend on component A directly or indirectly. This helps ensure that changes made to one component do not cause unexpected changes or breakages in another component.
