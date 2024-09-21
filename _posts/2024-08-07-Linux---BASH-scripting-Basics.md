@@ -1,5 +1,5 @@
 ---
-title: "Linux Bash Scripting Basics"
+title: "Linux - Bash Scripting Basics"
 layout: post
 ---
 

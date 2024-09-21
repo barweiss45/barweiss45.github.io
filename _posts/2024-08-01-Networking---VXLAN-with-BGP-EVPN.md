@@ -1,5 +1,5 @@
 ---
-title: "VXLAN with BGP EVPN"
+title: "Networking - VXLAN with BGP EVPN"
 layout: post
 ---
 
