@@ -11,7 +11,7 @@ The DataFrame is one of the most widely used Pandas objects because it allows fo
 
 ## Arrays in a DataFrame
 
-DataFrames are essentially built on top of **NumPy arrays**, meaning the underlying data is stored in a more optimized, fast array format. Each column in a DataFrame is a **Series**, which is a one-dimensional array-like structure. 
+DataFrames are essentially built on top of **NumPy arrays**, meaning the underlying data is stored in a more optimized, fast array format. Each column in a DataFrame is a **Series**, which is a one-dimensional array-like structure.
 
 When you create a DataFrame, the individual columns are arrays (Series), and these arrays are combined to form the complete DataFrame. Each column is indexed by its name (label), and each row is indexed by a number or an index label.
 
@@ -77,7 +77,7 @@ Dictionaries are a common way to represent data in a structured format. In Panda
 - You want to represent data in a structured format, where the keys are column names, and the values are lists (or arrays) representing the data.
 - When you have **named data** for each column (like CSV headers).
 
-### Example
+### Example of Creating a DataFrame Using a Dictionary
 
 ```python
 # Creating a DataFrame using a dictionary
@@ -111,7 +111,7 @@ Another approach is using a **list of dictionaries**, where each dictionary repr
 - Each entry represents a row, and you want each dictionary key to map to column names.
 - When you have **row-oriented** data, and each dictionary contains all the information for a single row.
 
-### Example
+### Example of Creating a DataFrame Using a List of Dictionaries
 
 ```python
 # Creating a DataFrame using a list of dictionaries
@@ -168,7 +168,7 @@ To represent data effectively in Pandas:
 
 4. **Convert data types if needed:** Pandas provides methods to convert columns to specific data types (e.g., integers, floats, dates). Use `df.astype()` to explicitly set the correct types.
 
-### Example
+### Example of Changing the Data Type of a Column
 
 ```python
 # Changing the data type of a column
