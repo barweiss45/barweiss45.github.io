@@ -9,7 +9,7 @@ Pandas is a powerful Python library used for data manipulation and analysis. It 
 
 - **Data manipulation:** Merge, filter, and transform data.
 - **Data cleaning:** Handle missing data and duplicate records.
-- **Data visualization:** Integrated with libraries like Matplotlib and Seaborn.
+- **Data visualization:** Integrated with libraries like **Matplotlib** and **Seaborn**.
 - **File I/O:** Read/write CSV, Excel, JSON, and more.
 
 ---
