@@ -1,5 +1,5 @@
 ---
-title: "Using `tcpdump` for Ubuntu 20.04 and up"
+title: "Linux - Using `tcpdump` for Ubuntu 20.04 and up"
 layout: post
 ---
 
@@ -35,7 +35,7 @@ sudo tcpdump -ni any 'tcp port 80 or tcp port 443'
 
 When you run the command, you should see output lines for each HTTP or HTTPS request that reaches the server.
 
-This command captures all traffic on these ports, including both request (incoming) and response (outgoing) packets. If you want to distinguish between incoming and outgoing traffic, you can further refine the filter. But for general monitoring of both HTTP and HTTPS traffic reaching the server, the 
+This command captures all traffic on these ports, including both request (incoming) and response (outgoing) packets. If you want to distinguish between incoming and outgoing traffic, you can further refine the filter. But for general monitoring of both HTTP and HTTPS traffic reaching the server, the
 above command should suffice.
 
 You can use the `tcpdump` command-line utility to capture and analyze network packets. To capture HTTP traffic on a specific network (172.20.0.0/24), you can use the following command:
