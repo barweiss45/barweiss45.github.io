@@ -10,10 +10,11 @@ email: "bweiss@pegasusnet.ai"
 author: "Barry Weiss"
 
 # Only pages listed here will be shown in the header
-# header_pages:
-#   - about.md
-#   - contact.md
-#   - resources.md
+header_pages:
+  - about.md
+  - resources.html
+  # - contact.md
+
 
 # Social media links
 linkedin_username: bweiss
