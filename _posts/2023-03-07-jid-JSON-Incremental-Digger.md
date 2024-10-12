@@ -1,6 +1,7 @@
 ---
 title: "jid - (JSON Incremental Digger)"
-layout: post
+author: "Barry Weiss"
+layout: "post"
 tags:
   - "Linux"
   - "JSON"

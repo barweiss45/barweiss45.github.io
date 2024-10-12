@@ -207,6 +207,44 @@
   @include relative-font-size(1.5);
 }
 
+/* Styling for the Tags: label */
+.post-tags-block p {
+  display: inline-block;
+  margin: 0;
+  padding: 0.1em 0.2em 0.1em 0; /* Tightened padding */
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+.post-tags-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em; /* Slightly reduced space between the label and the tags */
+}
+
+.post-tags {
+  padding: 0.15em 0.5em; /* Reduced padding inside the tags */
+  background-color: #cccccc;
+  border-radius: 20px;
+  color: #333333;
+  font-size: 0.9em;
+  display: inline-block;
+  margin: 0.15em 0; /* Tightened vertical spacing between tags */
+  line-height: 1.4; /* Slightly reduced line-height for better vertical centering */
+  transition: background-color 0.3s ease;
+}
+
+.post-tags a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post-tags:hover {
+  background-color: #e0e0e0;
+}
 
 
 /**

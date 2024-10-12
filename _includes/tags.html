@@ -1,0 +1,8 @@
+{% if page.tags %}
+  <p>Tags: </p>
+    {% for tag in page.tags %}
+    <div class="post-tags">
+      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>
+    </div>
+    {% endfor %}
+{% endif %}
