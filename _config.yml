@@ -11,9 +11,10 @@ author: "Barry Weiss"
 
 # Only pages listed here will be shown in the header
 header_pages:
-  - about.md
-  - resources.html
-  # - contact.md
+  - "about.md"
+  - "resources.html"
+  - "tag_index.html"
+  # - "contact.md"
 
 
 # Social media links

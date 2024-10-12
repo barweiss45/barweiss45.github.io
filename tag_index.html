@@ -1,0 +1,12 @@
+---
+layout: "page"
+title: "Tag Index"
+---
+
+<ul>
+  {% for tag in site.tags %}
+    <li>
+      <a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}">{{ tag[0] }} ({{ tag[1].size }})</a>
+    </li>
+  {% endfor %}
+</ul>
