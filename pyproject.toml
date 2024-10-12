@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Syntax & Scribbles Website - Jekyll Engine"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "barweiss45"}]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
