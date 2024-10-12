@@ -1,6 +1,8 @@
 ---
 title: "XML - Understanding the Basics"
-layout: post
+layout: "post"
+tags:
+  - "XML"
 ---
 
 Extensible Markup Language (XML) is a widely-used format for storing and transporting data. It is both human-readable and machine-readable, making it ideal for data exchange between different systems. XML uses a hierarchical structure, where data is organized into a tree-like format with a root element, child elements, attributes, and other types of nodes.

@@ -1,6 +1,10 @@
 ---
 title: "Python - Pandas Cheat Sheet"
-layout: post
+layout: "post"
+tags:
+  - "Python"
+  - "Pandas"
+  - "Cheat Sheet"
 ---
 
 Pandas is a powerful Python library used for data manipulation and analysis. It provides flexible data structures, such as DataFrames, that allow you to easily work with structured data. Pandas is commonly used for data wrangling, cleaning, and performing various data operations in a fast and efficient way.

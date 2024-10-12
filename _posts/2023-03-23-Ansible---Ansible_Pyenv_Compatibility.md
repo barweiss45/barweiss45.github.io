@@ -2,6 +2,10 @@
 layout: post
 title: "Ansible - Ansible Pyenv Compatibility"
 author: Barry
+tags:
+  - "Ansible"
+  - "Python"
+  - "Pyenv"
 ---
 
 Ansible 2.10 uses galaxy
@@ -15,7 +19,7 @@ Ansible 2.10 uses galaxy
   ```
 
 * need to use galaxy to add plugins now and must use complete FQDNs
-* Must set interpreter in cfg is using pyenv have to use  
+* Must set interpreter in cfg is using pyenv have to use
   * `--force-dep` on ansible-galaxy cisco.ios install
 
     ```bash

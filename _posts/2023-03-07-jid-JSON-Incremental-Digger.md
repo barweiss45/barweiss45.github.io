@@ -1,6 +1,9 @@
 ---
 title: "jid - (JSON Incremental Digger)"
 layout: post
+tags:
+  - "Linux"
+  - "JSON"
 ---
 
 `jid` is a simple and powerful interactive tool for querying and exploring JSON data. It allows you to filter and browse through JSON objects in real-time using an intuitive interface, making it easier to work with complex JSON data structures.
