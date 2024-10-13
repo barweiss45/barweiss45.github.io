@@ -1,5 +1,4 @@
-baseurl: ""
-
+baseurl: "" # the subpath of your site, e.g. /blog
 # Site settings
 title: "Syntax & Scribbles"
 
