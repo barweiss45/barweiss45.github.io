@@ -1,6 +1,9 @@
 ---
 title: "Git - Download a specific directory"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Git"
 ---
 
 When working with large repositories, cloning the entire project isn’t always necessary or efficient, especially if only specific files or directories are needed. Git’s sparse-checkout feature provides a way to download only the required parts of a repository, saving time, bandwidth, and storage space.

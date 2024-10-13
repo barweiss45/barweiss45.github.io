@@ -1,6 +1,9 @@
 ---
 title: "Data Science Notes"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Data Science"
 ---
 
 The empirical rule, also known as the **68-95-99.7** rule or the three-sigma rule, is a statistical guideline that describes data distribution in a normal distribution. The rule states that for a normal distribution:

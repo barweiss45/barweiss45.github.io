@@ -1,6 +1,10 @@
 ---
 title: "Linux - Bash Scripting Basics"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Linux"
+  - "Bash Scripting"
 ---
 
 These notes cover essential concepts such as creating and structuring basic Bash scripts. It explains how to use variables and basic operators, and introduces conditional statements like if-else and comparison operators. It also delves into the use of loops, including for and while, for handling repetitive tasks. Additionally, the document covers how to define and use functions, including how to pass arguments, manage return values, and understand variable scope. Several practical examples are included, such as file management, file operations, and output processing tasks like factorial calculation, to illustrate the application of these concepts in real-world scripting.
@@ -1113,7 +1117,7 @@ awk '$1 > 50' file.txt
 Print the first 10 lines of a file where $1 is an integer.
 
 ```bash
-user@host:~/dev/awk_testing$ awk '$1 < 10' tabular_data.txt 
+user@host:~/dev/awk_testing$ awk '$1 < 10' tabular_data.txt
 1       Auberon Forri   aforri0@canalblog.com   Male    200.109.190.92
 2       Slade   Lemonby slemonby1@arstechnica.com       Male    244.26.222.3
 3       Elfrida Gaitskell       egaitskell2@unc.edu     Female  28.131.115.188
@@ -1153,7 +1157,7 @@ awk '{ print NR, $0 }' file.txt
 This example will print each line in the file with a line number before it:
 
 ```bash
-$ awk '{ print NR, $0 }' tabular_data.txt 
+$ awk '{ print NR, $0 }' tabular_data.txt
 1 id    first_name      last_name       email   gender  ip_address
 2 1     Auberon Forri   aforri0@canalblog.com   Male    200.109.190.92
 3 2     Slade   Lemonby slemonby1@arstechnica.com       Male    244.26.222.3
@@ -1310,7 +1314,7 @@ To count the number of lines containing "error":
 awk 'BEGIN { count=0 } /error/ { count++ } END { print count }' file.txt
 ```
 
-### Inverting Matches 
+### Inverting Matches
 
 To select lines that do not match a pattern, use the `!~` operator.
 
@@ -1971,7 +1975,7 @@ done < input.txt
 
 This script reads each line from the file `input.txt` and prints it. The `while read line` loop iterates over each line of the file.
 
-The `read` command is a versatile tool in BASH scripting, useful for obtaining user input, handling sensitive information, and reading from files. 
+The `read` command is a versatile tool in BASH scripting, useful for obtaining user input, handling sensitive information, and reading from files.
 
 Certainly! Using the `read` command within a function can be quite powerful for creating interactive and reusable components in your BASH scripts. Let's go through a lesson on how to use `read` within functions, complete with examples.
 
@@ -2317,7 +2321,7 @@ There are three standard streams in Unix-like systems:
   command > /dev/null 2>&1
   ```
 
-  - `/dev/null` is a special file that discards all data written to it. 
+  - `/dev/null` is a special file that discards all data written to it.
   - This command effectively silences all output and error messages from `command`.
 
 ### Advanced Redirection Techniques
@@ -2360,7 +2364,7 @@ There are three standard streams in Unix-like systems:
 - **Batch Processing**:
   - Using input redirection to automate commands that usually require user input.
 
-Redirection is a powerful feature in BASH scripting that allows you to control the flow of data to and from commands. Understanding and using redirections like `>&1` and `>&2` can significantly improve the efficiency and manageability of your scripts, especially when dealing with logging and error handling. 
+Redirection is a powerful feature in BASH scripting that allows you to control the flow of data to and from commands. Understanding and using redirections like `>&1` and `>&2` can significantly improve the efficiency and manageability of your scripts, especially when dealing with logging and error handling.
 
 ## Logging in a BASH script
 

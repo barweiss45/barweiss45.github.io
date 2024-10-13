@@ -1,6 +1,10 @@
 ---
-layout: post
-title: HATEOAS - Hypermedia as the Engine of Application State
+title: "HATEOAS - Hypermedia as the Engine of Application State"
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "REST API"
+  - "Software Developement"
 ---
 **HATEOAS** stands for Hypermedia as the Engine of Application State. It's a constraint of the REST application architecture that keeps the RESTful style architecture unique from most other network application architectures.
 

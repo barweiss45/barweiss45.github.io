@@ -1,6 +1,9 @@
 ---
 title: "VMWare - General CLI Notes"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "VMWare"
 ---
 
 A handy set of VMware ESXi CLI commands to make life easier. These notes cover common tasks like clearing ARP caches, enabling promiscuous mode on vSwitches, managing port groups, and adding vNICs to VMs—all from the command line.
@@ -256,13 +259,13 @@ esxcli network vswitch standard portgroup list
 
 ```sh
 unset vmid
- 
+
 _vm="5915-Mark-PC"
- 
+
 _vim_output="$(vim-cmd vmsvc/getallvms | grep $_vm | awk '{print $1, $2}')"
- 
+
 echo "$_vim_output"
- 
+
 vmid="$( echo $_vim_output | grep -o '^[0-9]*')"
 
 # vim-cmd vmsvc/devices.createnic "$vmid" "vmxnet3" "Default Network"
@@ -282,12 +285,12 @@ vim-cmd vmsvc/device.getdevices "$vmid" | grep -A 26 -E "VirtualE1000|VirtualVmx
          print label, "\t", deviceName, "\t", macAddress
      }
  }'
- 
- 
+
+
 vim-cmd vmsvc/get.config $vmid | grep -A 1 -E "isolation\.tools|answer\.msg|uuid\.action"
 vim-cmd vmsvc/get.config $vmid | grep -A 1 -E "isolation\.tools|answer\.msg\.uuid|answer\.msg\.serial|uuid\.action"
 vim-cmd vmsvc/power.shutdown $vmid
- 
+
 cd /vmfs/volumes/datastore/$_vm
 echo 'answer.msg.serial.file.open = "replace"' >> "$_vm.vmx"
 

@@ -1,6 +1,9 @@
 ---
 title: "Python - Set Python Env with Pipx, Poetry, and Pyenv"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Python"
 ---
 
 These are notes on how to set up a Python Environment with *pipx*, *poetry*, and *pyenv* while phasing out the **pyenv-virtualenv** plugin.

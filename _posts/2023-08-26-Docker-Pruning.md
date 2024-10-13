@@ -1,9 +1,11 @@
 ---
 title: "Docker Pruning and Conserving Memory on Your Host: A Brief Tutorial"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Docker"
+  - "DevOps"
 ---
-
-## Introduction
 
 Docker is an essential tool for containerization, but as you build, run, and delete containers, you'll notice that your system starts accumulating unused data. This can be in the form of "dangling" images, stopped containers, unused volumes, and more. This tutorial aims to guide you through the process of cleaning up these unused resources to conserve memory and disk space on your host machine.
 

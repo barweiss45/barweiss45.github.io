@@ -1,6 +1,10 @@
 ---
 title: "Python - Pandas DataFrames Overview"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Python"
+  - "Pandas"
 ---
 
 A **DataFrame** in Pandas is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns). Think of a DataFrame as a table (like an Excel spreadsheet or SQL table) where each column can contain different data types (integers, floats, strings, etc.), but all columns share the same index.

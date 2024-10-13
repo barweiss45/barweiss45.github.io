@@ -1,6 +1,9 @@
 ---
 title: DEVOPS - Notes
-layout: post
+layout: "post"
+Author: "Barry Weiss"
+tags:
+  - "DevOps"
 ---
 
 In recent years, industry trends and innovations have significantly transformed business operations. Businesses increasingly incorporate mobility, the Internet of Things (IoT), and cloud services to meet market demands, requiring agility, simplicity, speed, and innovation to stay competitive. This transformation, known as digital transformation, necessitates new tools, culture, and processes, particularly in how developers and operations teams interact.
@@ -43,23 +46,23 @@ DevOps is a cultural and operational approach integrating development and operat
 ### CALMS Model
 The CALMS model encapsulates the guiding principles of DevOps, focusing on Culture, Automation, Lean, Measurement, and Sharing. Each component plays a crucial role in fostering a successful DevOps environment:
 
-1. **Culture**: 
+1. **Culture**:
    - Good habits, trust, respect, support, collaboration, and no blame culture.
    - Management evolution to support a collaborative environment.
 
-2. **Automation**: 
+2. **Automation**:
    - Use of tools like Ansible, Chef, Puppet, and Terraform.
    - Automation occurs everywhere and between teams.
 
-3. **Lean**: 
+3. **Lean**:
    - Focus on eliminating waste and continuous learning.
    - Emphasis on people and optimizing the whole system.
 
-4. **Measurement**: 
+4. **Measurement**:
    - Measure everything, including mean time to repair (MTTR), frequency of outages, and resource costs.
    - Continuous improvement and success metrics.
 
-5. **Sharing**: 
+5. **Sharing**:
    - Share code, ideas, and problems.
    - Use common repositories like GitHub or GitLab and leverage ChatOps for communication.
 

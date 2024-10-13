@@ -1,7 +1,12 @@
 ---
 title: "Linux - Using `tcpdump` for Ubuntu 20.04 and up"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Linux"
 ---
+
+Some notes I made about using `tcpdump` to get a network capture on a linux host.
 
 ## Basic tcp/udp Port Capture on any Interface
 

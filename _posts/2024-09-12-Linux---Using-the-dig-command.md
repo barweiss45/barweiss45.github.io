@@ -1,6 +1,9 @@
 ---
 title: "Linux - Using the `dig` (Domain Information Groper) Command"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Linux"
 ---
 
 The `dig` (Domain Information Groper) command is a network administration command-line tool for querying Domain Name System (DNS) servers. It is commonly used to troubleshoot DNS problems and to perform DNS lookups.
@@ -224,7 +227,7 @@ dig [@server] [name] [type] [options]
   ```bash
   dig example.com +noall +answer
    ```
-  
+
   **Example Output:**
 
   ```bash

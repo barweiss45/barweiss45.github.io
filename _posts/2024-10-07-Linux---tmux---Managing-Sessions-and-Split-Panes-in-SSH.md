@@ -1,6 +1,9 @@
 ---
 title: "Linux - `tmux` - Managing Sessions and Split Panes in SSH Sessions"
 layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Linux"
 ---
 
 **Tmux** (short for **terminal multiplexer**) is a powerful tool that allows users to manage multiple terminal sessions within a single window. It lets you open various windows and split them into panes within a single session. These sessions can be detached and reattached, which is incredibly useful when working remotely over SSH, as you can maintain long-running processes even if you disconnect.

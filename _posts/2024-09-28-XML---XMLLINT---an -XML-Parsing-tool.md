@@ -1,6 +1,9 @@
 ---
 title: "XMLLINT - An XML Parsing Tool"
 layout: "post"
+author: "Barry Weiss"
+tags:
+  - "XML"
 ---
 
 `xmllint` is a command-line tool used for parsing and validating XML files. It offers various options to perform different functions, such as formatting XML, extracting specific data, or validating against XML schemas. This versatility makes xmllint an essential utility for anyone working with XML data.

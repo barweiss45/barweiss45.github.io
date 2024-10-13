@@ -1,9 +1,13 @@
 ---
 title: "Networking - VXLAN with BGP EVPN"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Networking"
+  - "EVPN"
 ---
 
-**EVPN (Ethernet VPN)** with **VXLAN (Virtual Extensible LAN)** is a network virtualization technology that allows you to extend Layer 2 networks across Layer 3 boundaries. This is particularly useful in data center environments for creating scalable and flexible network architectures. 
+**EVPN (Ethernet VPN)** with **VXLAN (Virtual Extensible LAN)** is a network virtualization technology that allows you to extend Layer 2 networks across Layer 3 boundaries. This is particularly useful in data center environments for creating scalable and flexible network architectures.
 
 ## Key Components
 
@@ -206,37 +210,37 @@ All will show every layer 2 route for all evpn segments. Use `evi [vlan-id]` ins
 ```bash
 rcd09-c1-sw-evpn-infra-leaf-01# show l2route evpn mac all
 
-Flags -(Rmac):Router MAC (Stt):Static (L):Local (R):Remote 
+Flags -(Rmac):Router MAC (Stt):Static (L):Local (R):Remote
 (Dup):Duplicate (Spl):Split (Rcv):Recv (AD):Auto-Delete (D):Del Pending
 (S):Stale (C):Clear, (Ps):Peer Sync (O):Re-Originated (Nho):NH-Override
 (Asy):Asymmetric (Gw):Gateway
 (Pf):Permanently-Frozen, (Orp): Orphan
 
-(PipOrp): Directly connected Orphan to PIP based vPC BGW 
-(PipPeerOrp): Orphan connected to peer of PIP based vPC BGW 
-Topology    Mac Address    Prod   Flags         Seq No     Next-Hops                              
+(PipOrp): Directly connected Orphan to PIP based vPC BGW
+(PipPeerOrp): Orphan connected to peer of PIP based vPC BGW
+Topology    Mac Address    Prod   Flags         Seq No     Next-Hops
 ----------- -------------- ------ ------------- ---------- ---------------------------------------------------------
-3701        000c.292e.7a00 Local  L,            0          Po509                                                    
-3701        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103701)                           
-3701        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3702        000c.292e.7a00 Local  L,            0          Po509                                                    
-3702        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103702)                           
-3702        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3703        000c.292e.7a00 Local  L,            0          Po509                                                    
-3703        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103703)                           
-3703        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3703        5254.0015.4fe6 Local  L,            0          Po509                                                    
-3704        000c.292e.7a00 Local  L,            0          Po509                                                    
-3704        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103704)                           
-3704        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3705        000c.292e.7a00 Local  L,            0          Po509                                                    
-3705        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103705)                           
-3705        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3706        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3707        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3708        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3709        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
-3710        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11                                            
+3701        000c.292e.7a00 Local  L,            0          Po509
+3701        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103701)
+3701        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3702        000c.292e.7a00 Local  L,            0          Po509
+3702        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103702)
+3702        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3703        000c.292e.7a00 Local  L,            0          Po509
+3703        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103703)
+3703        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3703        5254.0015.4fe6 Local  L,            0          Po509
+3704        000c.292e.7a00 Local  L,            0          Po509
+3704        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103704)
+3704        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3705        000c.292e.7a00 Local  L,            0          Po509
+3705        0050.56b7.fb0a BGP    Rcv           0          10.100.201.101 (Label: 103705)
+3705        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3706        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3707        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3708        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3709        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
+3710        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
 3711        4cec.0fe5.1aeb VXLAN  Stt,Nho,      0          10.100.201.11
 <-- Output Omitted -->
 ```

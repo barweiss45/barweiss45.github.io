@@ -1,6 +1,8 @@
 ---
 title: "Linux - Communicating through the Terminal to Other Users"
-layout: post
+layout: "post"
+tags:
+  - "Linux"
 ---
 
 In this tutorial, we’ll learn how to leave a message to another local user in Linux. There are several commands that we can use to achieve this. We’ll first look at the wall command. We’ll then cover the remaining commands mostly used for this purpose.
@@ -21,7 +23,7 @@ For instance, to send a message to all local users, we’d execute the wall comm
 
 ```bash
 $ wall The system will shut down at 08:45 PM
-Broadcast message from sidrah@ubuntu (pts/0) (Sat Jan 7 07:14:50 2023): 
+Broadcast message from sidrah@ubuntu (pts/0) (Sat Jan 7 07:14:50 2023):
 The system will shut down at 08:45 PM
 ```
 
@@ -67,7 +69,7 @@ For instance, if the user `sidrah` wants to send a message to a user `mary`, the
 ```bash
 $ write mary
 Hey, mary!
-Did you complete the assignment? 
+Did you complete the assignment?
 ^D
 ```
 
@@ -149,7 +151,7 @@ Let’s look at the exchange of messages:
 ```bash
 ----------------------------= YTalk version 3.3.0 =--------------------------
 Are you ready for the meeting?
--------------------------------= mary@ubuntu =---------------------------- 
+-------------------------------= mary@ubuntu =----------------------------
 Yes, I'm ready!
 ```
 

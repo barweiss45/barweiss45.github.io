@@ -1,6 +1,7 @@
 ---
 title: "Python - Pandas Cheat Sheet"
 layout: "post"
+author: "Barry Weiss"
 tags:
   - "Python"
   - "Pandas"

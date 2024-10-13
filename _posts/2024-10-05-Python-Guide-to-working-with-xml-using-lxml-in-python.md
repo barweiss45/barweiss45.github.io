@@ -1,6 +1,10 @@
 ---
 title: "Python - A Guide to Working with XML Using lxml in Python"
 layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Python"
+  - "XML"
 ---
 
 **lxml** is one of Python’s most powerful libraries for working with XML and HTML documents. Built on top of **libxml2**, it offers fast performance and a variety of tools to handle elements, nodes, and namespaces efficiently.

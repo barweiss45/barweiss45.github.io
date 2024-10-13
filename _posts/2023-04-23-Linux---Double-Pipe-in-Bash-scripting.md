@@ -1,6 +1,10 @@
 ---
 title: "Linux - What does the Double pipe `||` mean in Bash scripting?"
 layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Linux"
+  - "Bash Scripting"
 ---
 
 The `||` (double pipe) operator is used as a logical OR in Bash scripting to chain commands. It allows you to run the command following the `||` operator if the command preceding it fails (i.e., returns a non-zero exit status).

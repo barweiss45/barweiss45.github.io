@@ -1,6 +1,8 @@
 ---
 title: "GitLab: Create a self-signed Certificate for a self-contained lab"
-layout: post
+layout: "post"
+tags:
+  - "Git"
 ---
 
 > These Notes are based on a lab that I had to build. These instructions may or may not work for you depending on your situation.
@@ -56,18 +58,18 @@ The certificate will also be marked as a CA if you're generating a self-signed c
     req_extensions = req_ext
     x509_extensions = v3_req
     prompt = no
-    
+
     [req_distinguished_name]
     CN = git.lab
-    
+
     [v3_ca]
     keyUsage = critical, keyCertSign, cRLSign
     basicConstraints = critical, CA:true
     subjectAltName = @alt_names
-    
+
     [req_ext]
     subjectAltName = @alt_names
-    
+
     [alt_names]
     DNS.1 = git.lab
     IP.1    = 127.0.0.1

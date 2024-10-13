@@ -1,6 +1,9 @@
 ---
 title: "Software Development - Dependency Inversion Principle"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Software Development"
 ---
 
 The **Dependency Inversion Principle** (DIP) is a programming concept that encourages developers to write more flexible and reusable code.

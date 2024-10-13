@@ -1,6 +1,9 @@
 ---
 title: "Python Code Snippets from Previous Projects"
-layout: post
+layout: "post"
+author: "Barry Weiss"
+tags:
+  - "Python"
 ---
 
 A collection of useful code snippets and notes that I've found handy throughout various projects. Whether you're dealing with API limits or parsing YAML files, these examples should make your life a bit easier!
