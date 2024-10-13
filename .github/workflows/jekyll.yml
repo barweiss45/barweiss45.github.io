@@ -28,7 +28,7 @@ jobs:
 
       # Set up Ruby for Jekyll
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
           ruby-version: '3.1' # or whichever Ruby version you're using
           bundler-cache: true # Automatically installs gems and caches them
