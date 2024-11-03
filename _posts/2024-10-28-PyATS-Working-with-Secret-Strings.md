@@ -50,7 +50,7 @@ your_project/
 ├── pyats.conf          # Project-specific configuration (gitignored)
 ├── pyats.conf.template # Template for configuration (version controlled)
 ├── testbed.yaml        # Your testbed file
-├── tests/
+e├── tests/
 └── .gitignore         # Include pyats.conf here
 ```
 
