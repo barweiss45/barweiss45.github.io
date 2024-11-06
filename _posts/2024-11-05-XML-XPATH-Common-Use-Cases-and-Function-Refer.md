@@ -223,8 +223,6 @@ Remember:
 - Use `concat()` for combining values
 - Check for existence before accessing values
 
----
-
 ## XPath Functions Reference Guide
 
 ### String Functions
