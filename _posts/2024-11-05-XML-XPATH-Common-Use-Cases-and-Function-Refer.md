@@ -185,41 +185,44 @@ ceiling(//rating)                # Round up
 ## 6. Best Practices for Value Handling
 
 1. **Always Use Type Conversion**
-```xpath
-# Good
-number(//price) > 100
-# Bad
-//price > 100                    # Might fail with currency symbols
-```
+   ```xpath
+   # Good
+   number(//price) > 100
+   # Bad
+   //price > 100                    # Might fail with currency symbols
+   ```
 
 2. **Handle Missing Values**
-```xpath
-# Check before using
-//product[price][number(price) > 100]  # Only products with price
-```
+   ```xpath
+   # Check before using
+   //product[price][number(price) > 100]  # Only products with price
+   ```
 
 3. **Text Normalization**
-```xpath
-# Clean text before comparison
-normalize-space(translate(//status, 'ACTIVE', 'active'))
-```
+   ```xpath
+   # Clean text before comparison
+   normalize-space(translate(//status, 'ACTIVE', 'active'))
+    ```
 
 4. **Performance Tips**
-```xpath
-# Use specific paths when possible
-/store/products/product/price    # Better
-//price                         # Slower
+   ```xpath
+   # Use specific paths when possible
+   /store/products/product/price    # Better
+   //price                         # Slower
+   ```
 
+---
 # Combine conditions
-//product[@status='active' and number(price) < 100]  # Better
-//product[@status='active'][number(price) < 100]     # Slower
-```
+  ```xpath
+  //product[@status='active' and number(price) < 100]  # Better
+  //product[@status='active'][number(price) < 100]     # Slower
+   ```
 
 Remember:
 - `text()` gets just the text content
-- `string()` gets all text including descendants
+- `string()` gets all text, including descendants
 - `normalize-space()` removes extra whitespace
-- Always convert to appropriate type (`number()` for calculations)
+- Always convert to the appropriate type (`number()` for calculations)
 - Use `concat()` for combining values
 - Check for existence before accessing values
 
