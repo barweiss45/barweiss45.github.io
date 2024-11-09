@@ -1,12 +1,10 @@
 ---
-title: "Python Environment Setup with Pipx, Poetry, and Pyenv ✨"
+title: "Python - Environment Setup with Pipx, Poetry, and Pyenv ✨"
 author: "Yumi-chan"
 layout: "post"
 tags:
   - "Python"
 ---
-
-## Introduction
 
 This guide will walk you through setting up your Python environment using `pipx`, `poetry`, and `pyenv`. These tools work together seamlessly to help you manage isolated environments, dependencies, and Python versions efficiently. Ready to streamline your Python setup? Let's get started! 💪
 
