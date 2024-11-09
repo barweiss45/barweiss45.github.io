@@ -5,6 +5,7 @@ layout: "post"
 tags:
   - "Linux"
   - "Regex"
+  - "Cheat Sheet"
 ---
 
 This introductory guide serves as a handy reference for common regular expressions (regex) you can use with the `grep` command. If you're just starting out or need a quick refresh, this cheat sheet will make it easy to get the hang of the essential regex patterns that go hand in hand with `grep`.
