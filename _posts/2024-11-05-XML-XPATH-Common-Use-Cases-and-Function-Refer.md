@@ -1,5 +1,5 @@
 ---
-title: "XML - XPATH Common Use Cases and Function Refer"
+title: "XML - XPATH Common Use Cases and Function Reference"
 author: "Barry Weiss"
 layout: "post"
 tags:
