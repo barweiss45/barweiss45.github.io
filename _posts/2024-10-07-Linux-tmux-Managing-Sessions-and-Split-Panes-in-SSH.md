@@ -1,7 +1,7 @@
 ---
 title: "Linux - `tmux` - Managing Sessions and Split Panes in SSH Sessions"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Linux"
 ---

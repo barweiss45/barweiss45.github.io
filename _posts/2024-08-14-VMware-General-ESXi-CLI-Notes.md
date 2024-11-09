@@ -1,7 +1,7 @@
 ---
 title: "VMWare - General CLI Notes"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "VMWare"
 ---

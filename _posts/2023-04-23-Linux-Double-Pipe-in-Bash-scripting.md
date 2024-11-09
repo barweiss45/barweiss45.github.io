@@ -1,7 +1,7 @@
 ---
 title: "Linux - What does the Double pipe `||` mean in Bash scripting?"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Linux"
   - "Bash Scripting"

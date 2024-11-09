@@ -1,10 +1,10 @@
 ---
-title: "Software Development - Understanding OAuth 2.0"
-layout: "post"
+title: "Understanding OAuth 2.0: A Beginner's Guide to Modern API Security"
 author: "Barry Weiss"
+layout: "post"
 tags:
-  - "Software Development"
   - "Security"
+  - "Software Development"
 ---
 
 In today's digital age, proving your identity online is critical to accessing various services and applications. While traditional methods like username and password authentication have been widely used, the increasing complexity of online ecosystems demands a more secure and flexible approach. OAuth 2.0 is the modern standard for access delegation, allowing users to grant third-party services access to their resources without sharing credentials directly.

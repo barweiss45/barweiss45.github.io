@@ -1,5 +1,6 @@
 ---
 title: "Linux - Communicating through the Terminal to Other Users"
+author: "Barry Weiss"
 layout: "post"
 tags:
   - "Linux"

@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Ansible - Ansible Pyenv Compatibility"
-author: Barry
+author: "Barry"
+layout: "post"
 tags:
   - "Ansible"
   - "Python"

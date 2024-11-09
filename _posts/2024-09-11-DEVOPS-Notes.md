@@ -1,7 +1,7 @@
 ---
 title: DEVOPS - Notes
-layout: "post"
 Author: "Barry Weiss"
+layout: "post"
 tags:
   - "DevOps"
 ---

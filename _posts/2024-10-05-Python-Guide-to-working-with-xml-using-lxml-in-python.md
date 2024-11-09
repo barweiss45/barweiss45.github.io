@@ -1,7 +1,7 @@
 ---
 title: "Python - A Guide to Working with XML Using lxml in Python"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Python"
   - "XML"

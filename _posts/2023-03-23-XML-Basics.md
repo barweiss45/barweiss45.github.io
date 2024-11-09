@@ -1,5 +1,6 @@
 ---
 title: "XML - Understanding the Basics"
+author: "Barry Weiss"
 layout: "post"
 tags:
   - "XML"

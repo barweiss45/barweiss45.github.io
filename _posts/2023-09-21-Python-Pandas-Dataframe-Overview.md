@@ -1,7 +1,7 @@
 ---
 title: "Python - Pandas DataFrames Overview"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Python"
   - "Pandas"

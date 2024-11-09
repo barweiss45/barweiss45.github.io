@@ -1,7 +1,7 @@
 ---
 title: "Python Code Snippets from Previous Projects"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Python"
 ---

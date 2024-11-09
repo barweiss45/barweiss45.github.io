@@ -1,7 +1,7 @@
 ---
 title: "HATEOAS - Hypermedia as the Engine of Application State"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "REST API"
   - "Software Development"

@@ -1,7 +1,7 @@
 ---
 title: "Software Development - Dependency Inversion Principle"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Software Development"
 ---

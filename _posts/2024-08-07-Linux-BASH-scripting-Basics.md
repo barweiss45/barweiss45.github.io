@@ -1,7 +1,7 @@
 ---
 title: "Linux - Bash Scripting Basics"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Linux"
   - "Bash Scripting"

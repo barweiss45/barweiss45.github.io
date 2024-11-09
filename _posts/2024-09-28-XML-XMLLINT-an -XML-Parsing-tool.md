@@ -1,7 +1,7 @@
 ---
 title: "XMLLINT - An XML Parsing Tool"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "XML"
 ---

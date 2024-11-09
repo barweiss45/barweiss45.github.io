@@ -1,7 +1,7 @@
 ---
 title: "Data Science Notes"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Data Science"
 ---

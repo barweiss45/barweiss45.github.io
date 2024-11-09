@@ -1,7 +1,7 @@
 ---
 title: "Docker Pruning and Conserving Memory on Your Host: A Brief Tutorial"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Docker"
   - "DevOps"

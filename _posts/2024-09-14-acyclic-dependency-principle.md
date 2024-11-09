@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Software Development - Acyclic Dependency Principle - ADP"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Software Development"
 ---

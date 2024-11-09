@@ -1,7 +1,7 @@
 ---
 title: "Linux - Using the `dig` (Domain Information Groper) Command"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Linux"
 ---

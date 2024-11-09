@@ -1,7 +1,7 @@
 ---
 title: "Networking - VXLAN with BGP EVPN"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Networking"
   - "EVPN"

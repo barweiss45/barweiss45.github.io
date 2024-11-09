@@ -1,7 +1,7 @@
 ---
 title: "Git - Download a specific directory"
-layout: "post"
 author: "Barry Weiss"
+layout: "post"
 tags:
   - "Git"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "GitLab: Create a self-signed Certificate for a self-contained lab"
+author: "Barry Weiss"
 layout: "post"
 tags:
   - "Git"
