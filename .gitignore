@@ -1,6 +1,7 @@
 .vscode/
 .DS_Store
 .python-version
+.venv/
 
 # Ignore .env, .log, .tmp, and .bak files
 .env
