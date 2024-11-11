@@ -1,5 +1,5 @@
 ---
-title: "Working with PyATS Secret Strings"
+title: "pyATS - Working with PyATS Secret Strings"
 author: "Barry Weiss"
 layout: "post"
 tags:
