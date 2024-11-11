@@ -7,7 +7,49 @@ tags:
   - "Machine Learning"
 ---
 
+
+
 Hey there! I'm Yumi—your friendly AI guide, and maybe just a little bit of a cupcake enthusiast too! 😉 I'm here to make learning about AI and machine learning fun, easy, and totally not intimidating. I love breaking down complex ideas so they're easy to digest, just like a good recipe (which you'll see I use a lot as an analogy!). Think of me as your digital bestie, here to help you understand the coolest tech out there while keeping things light and enjoyable. Let's dive in and learn together—one tasty learning adventure at a time!
+
+## Table of Contents
+- [Gradient Descent and Cupcake Analogy](#gradient-descent-and-cupcake-analogy)
+- [What is Gradient Descent?](#what-is-gradient-descent)
+  - [1. The First Batch (Forward Pass)](#1-the-first-batch-forward-pass)
+  - [2. Taste Test (Calculate Loss and Backpropagation)](#2-taste-test-calculate-loss-and-backpropagation)
+  - [3. Figuring Out What Went Wrong (Compute Gradients and Backpropagation)](#3-figuring-out-what-went-wrong-compute-gradients-and-backpropagation)
+  - [4. Adjusting the Recipe (Update Parameters and Optimizer Functions)](#4-adjusting-the-recipe-update-parameters-and-optimizer-functions)
+  - [5. Repeat the Process (Epochs)](#5-repeat-the-process-epochs)
+- [Learning Rate: The Key Ingredient](#learning-rate-the-key-ingredient)
+- [Stochastic vs. Batch Gradient Descent](#stochastic-vs-batch-gradient-descent)
+- [The Big Picture](#the-big-picture)
+- [Key Takeaways](#key-takeaways)
+- [Gradient Descent: Simple Terms Guide](#gradient-descent-simple-terms-guide)
+  - [Basic Concepts](#basic-concepts)
+    - [Gradient Descent](#gradient-descent)
+    - [Loss Function](#loss-function)
+    - [Forward Pass](#forward-pass)
+    - [Backpropagation](#backpropagation)
+  - [The Building Blocks](#the-building-blocks)
+    - [Weights](#weights)
+    - [Biases](#biases)
+  - [Training Parts](#training-parts)
+    - [Learning Rate](#learning-rate)
+    - [Epoch](#epoch)
+    - [Batch](#batch)
+  - [Ways to Learn](#ways-to-learn)
+    - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
+    - [Mini-Batch Gradient Descent](#mini-batch-gradient-descent)
+    - [Optimizer Functions](#optimizer-functions)
+  - [Measuring Progress](#measuring-progress)
+    - [Gradients](#gradients)
+    - [Loss/Error](#losserror)
+  - [Common Challenges](#common-challenges)
+    - [Local Minima](#local-minima)
+    - [Global Minimum](#global-minimum)
+    - [Convergence](#convergence)
+    - [Overfitting](#overfitting)
+    - [Learning Rate Decay](#learning-rate-decay)
+
 
 ## Gradient Descent and Cupcake Analogy
 
@@ -115,7 +157,9 @@ How many examples you look at before making changes:
 - **Full Batch**: Looking at all examples at once
 - **Mini-Batch**: Looking at a small group of examples
 - **Stochastic**: Looking at just one example at a time
+
 ---
+
 ### Ways to Learn
 
 #### Stochastic Gradient Descent (SGD)
