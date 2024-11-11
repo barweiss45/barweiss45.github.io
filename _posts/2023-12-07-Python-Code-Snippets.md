@@ -1,5 +1,5 @@
 ---
-title: "Python Code Snippets from Previous Projects"
+title: "Python - Code Snippets from Previous Projects"
 author: "Barry Weiss"
 layout: "post"
 tags:

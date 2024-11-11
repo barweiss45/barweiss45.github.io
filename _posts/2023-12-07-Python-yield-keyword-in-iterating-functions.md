@@ -1,5 +1,5 @@
 ---
-title: "Python Yield Keyword in Iterating Functions"
+title: "Python - Yield Keyword in Iterating Functions"
 author: "Barry Weiss"
 layout: "post"
 tags:
