@@ -19,7 +19,7 @@ Gradient descent is a fundamental algorithm in machine learning used to optimize
 
 Here’s how it goes:
 
-![decent gradient recipe by Yumi@2x](assets/images/gradient_descent_recip_by_Yumi_2x.webp)
+![decent gradient recipe by Yumi@2x](/assets/images/gradient_descent_recip_by_Yumi_2x.webp)
 
 ### 1. The First Batch (Forward Pass)
 
