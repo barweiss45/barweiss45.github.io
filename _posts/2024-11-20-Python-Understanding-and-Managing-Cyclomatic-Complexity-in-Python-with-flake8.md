@@ -103,8 +103,6 @@ Here are some practical ways to simplify your code:
 5. **Avoid Deep Nesting**
    Refactor deeply nested loops or conditionals to improve readability.
 
-Here’s how we can use **polymorphism** to decrease cyclomatic complexity and make the explanation part of your guide more practical and focused:
-
 ## Polymorphism to Decrease Complexity
 Polymorphism allows you to reduce cyclomatic complexity by replacing large `if`/`elif`/`else` chains or repetitive logic with a cleaner, extensible design. Polymorphism delegates behavior to individual classes instead of manually checking types and applying specific behavior.
 
