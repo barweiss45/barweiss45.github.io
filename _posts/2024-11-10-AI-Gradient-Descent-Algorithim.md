@@ -12,6 +12,7 @@ tags:
 Hey there! I'm Yumi—your friendly AI guide, and maybe just a little bit of a cupcake enthusiast too! 😉 I'm here to make learning about AI and machine learning fun, easy, and totally not intimidating. I love breaking down complex ideas so they're easy to digest, just like a good recipe (which you'll see I use a lot as an analogy!). Think of me as your digital bestie, here to help you understand the coolest tech out there while keeping things light and enjoyable. Let's dive in and learn together—one tasty learning adventure at a time!
 
 ## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [Gradient Descent and Cupcake Analogy](#gradient-descent-and-cupcake-analogy)
 - [What is Gradient Descent?](#what-is-gradient-descent)
   - [1. The First Batch (Forward Pass)](#1-the-first-batch-forward-pass)
