@@ -153,15 +153,15 @@ Git is a distributed version control system (DVCS) that helps developers track, 
 
 ### Pushing Changes
 - **Command:** `git push origin <branch-name>`
-  - Uploads your local commits to the ☁️ remote repository. Add `--set-upstream` on the first push to establish tracking.
+  - Uploads your local commits to the remote repository. Add `--set-upstream` on the first push to establish tracking.
 
 ### Pulling Changes
 - **Command:** `git pull`
-  - 📦 Fetches and merges changes from the remote repository into your current branch. Use `--rebase` for a linear commit history.
+  - Fetches and merges changes from the remote repository into your current branch. Use `--rebase` for a linear commit history.
 
 ### Viewing Remote Repositories
 - **Command:** `git remote -v`
-  - 🔄 Lists the URLs of remote repositories associated with your local repository. Manage remotes using `git remote add <name> <url>` or `git remote remove <name>`.
+  - Lists the URLs of remote repositories associated with your local repository. Manage remotes using `git remote add <name> <url>` or `git remote remove <name>`.
 
 ### Syncing Branches
 - **Command:** `git fetch` then `git merge`
